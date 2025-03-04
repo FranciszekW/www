@@ -30,7 +30,7 @@ for row in rows[1:11]:
 drivers = sorted(drivers, key=lambda x: int(x['starts']), reverse=True)
 
 # Teraz zapisujemy dane do pliku markdown
-with open('index.md', 'w', encoding='utf-8') as file:
+with open('task1.md', 'w', encoding='utf-8') as file:
     file.write('# Najbardziej doświadczeni kierowcy F1\n\n')
     for driver in drivers:
         file.write(f"## {driver['name']}\n")

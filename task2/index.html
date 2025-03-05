@@ -1,0 +1,143 @@
+<!-- Stwórz stronę w hmtl
+    Wymagania
+
+    Struktura strony:
+        Należy dodać do strony nagłówek, artykuł i stopkę (elementy <header>, <article> i <footer>).
+        Użyć tagów <h1> i <h2> do wyróżnienia nagłówków.
+    Tabela:
+        Stworzyć tabelkę z danymi (mogą być wymyślone).
+        Tabela powinna zawierać nagłówek, wiersze i kolumny z danymi.
+        Należy nadać tabeli tytuł.
+    Lista:
+        Stworzyć listę numerowaną cyframi rzymskimi.
+    Wyróżnienia:
+        Użyć tagów do wyróżnienia tekstu (np. <strong>, <em>).
+    Obrazek:
+        Dodać do strony obrazek (element <img>).
+    Formularz:
+        Stworzyć formularz (element <form>) zawierający między innnymi:
+            Pole tekstowe (element <input>).
+            Pole wyboru (element <select>) z optgroup.
+            Przycisk (element <button>).
+    Rozwijany opis:
+        Użyć tagów <details> i <summary> do stworzenia rozwijanego opisu.
+    Pasek postępu:
+        Użyć elementu <progress> do stworzenia paska postępu (np. dla postępu zrobienia zadania).
+    Mapa:
+        Stworzyć sensowną mapę za pomocą elementów <map> i <area>. Mapa powinna zawierać co najmniej 3 obszary. 
+    
+    Możesz rozszerzyć zadanie o dodatkowe elementy, np.:
+
+    Dodanie linków do innych stron.
+    Umieszczenie filmu na stronie.
+    Użycie stylów inline do formatowania tekstu.
+-->
+
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Formuła 1</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <header>
+      <div align="center">
+        <h1 id="title">Formuła 1</h1>
+        <nav>
+          <ul class="menu">
+            <li style="display: inline">
+              <a href="index.html">Historia Formuły 1</a>
+            </li>
+            &nbsp;&nbsp;
+            <li style="display: inline">
+              <a href="glory.html">Galeria sław</a>
+            </li>
+            &nbsp;&nbsp;
+            <li style="display: inline">
+              <a href="curious.html">Ciekawostki</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <br /><br />
+    <article>
+      <div align="center">
+        <h2>Historia Formuły 1</h2>
+        <br />
+        <!-- Tabela zawierająca 10 ostatnich zwycięzców mistrzostw świata F1-->
+        <table border="1">
+          <caption>
+            <em>Ostatni zwycięzcy Mistrzostw Świata Formuły 1</em>
+          </caption>
+          <tr>
+            <th>Sezon</th>
+            <th>Kierowca</th>
+            <th>Zespół</th>
+          </tr>
+          <tr>
+            <td>2024</td>
+            <td><strong>Max Verstappen</strong></td>
+            <td>Red Bull Racing</td>
+          </tr>
+          <tr>
+            <td>2023</td>
+            <td><strong>Max Verstappen</strong></td>
+            <td>Red Bull Racing</td>
+          </tr>
+          <tr>
+            <td>2022</td>
+            <td><strong>Max Verstappen</strong></td>
+            <td>Red Bull Racing</td>
+          </tr>
+          <tr>
+            <td>2021</td>
+            <td><strong>Max Verstappen</strong></td>
+            <td>Red Bull Racing</td>
+          </tr>
+          <tr>
+            <td>2020</td>
+            <td><strong>Lewis Hamilton</strong></td>
+            <td>Mercedes</td>
+          </tr>
+          <tr>
+            <td>2019</td>
+            <td><strong>Lewis Hamilton</strong></td>
+            <td>Mercedes</td>
+          </tr>
+          <tr>
+            <td>2018</td>
+            <td><strong>Lewis Hamilton</strong></td>
+            <td>Mercedes</td>
+          </tr>
+          <tr>
+            <td>2017</td>
+            <td><strong>Lewis Hamilton</strong></td>
+            <td>Mercedes</td>
+          </tr>
+          <tr>
+            <td>2016</td>
+            <td><strong>Nico Rosberg</strong></td>
+            <td>Mercedes</td>
+          </tr>
+          <tr>
+            <td>2015</td>
+            <td><strong>Lewis Hamilton</strong></td>
+            <td>Mercedes</td>
+          </tr>
+        </table>
+        <br />
+    </div>
+        <!-- Lista zawierająca ranking najlepszych kierowców XX wieku -->
+        <h3>Ranking najlepszych kierowców XXI wieku</h3>
+        <br>
+        <ol type="I">
+          <li>Robert Kubica</li>
+          <li>Max Verstappen</li>
+          <li>Fernando Alonso</li>
+        </ol>
+    </article>
+  </body>
+</html>

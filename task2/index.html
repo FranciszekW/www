@@ -403,6 +403,8 @@
         🏁 Formularz został poprawnie wysłany! 🏁
       </div>
 
+      <audio id="speedSound" src="audio/speed.mp3"></audio>
+
       <script>
         // Funkcja obsługująca wysłanie formularza
         document
@@ -414,9 +416,14 @@
             var responseMessage = document.getElementById("responseMessage");
             responseMessage.style.display = "block"; // Wyświetla komunikat
 
+            // Odtwarza dźwięk
+            var speedSound = document.getElementById("speedSound");
+            speedSound.volume = 0.2;
+            speedSound.play();
+
             setTimeout(function () {
               responseMessage.style.display = "none";
-            }, 3000); // Komunikat znika po 3 sekundach
+            }, 5000); // Komunikat znika po 5 sekundach
           });
       </script>
       <br />
@@ -484,6 +491,87 @@
       <br />
       <br />
       <!-- Mapa z zaznaczonymi torami wyścigowymi Formuły 1 -->
+      <img src="img/europe.jpg" usemap="#F1-in-Europe" alt="Mapa Europy" />
+
+      <map name="F1-in-Europe">
+        <area
+          target="_blank"
+          alt="Hiszpania"
+          title="Hiszpania"
+          href="https://pl.wikipedia.org/wiki/Grand_Prix_Hiszpanii_Formu%C5%82y_1"
+          coords="32,350,56,358,83,365,99,370,109,375,124,379,136,385,129,393,118,401,107,410,100,419,103,428,93,437,78,445,56,447,39,450,31,439,24,431,43,378,26,370"
+          shape="poly"
+        />
+        <area
+          target="_blank"
+          alt="Francja"
+          title="Francja"
+          href="https://pl.wikipedia.org/wiki/Grand_Prix_Francji_Formu%C5%82y_1"
+          coords="100,367,135,383,143,370,159,373,180,366,175,358,176,347,170,338,173,327,181,315,186,303,157,287,148,278,138,273,125,285,115,292,100,295,78,297,96,313,104,329,103,340,102,349"
+          shape="poly"
+        />
+        <area
+          target="_blank"
+          alt="Włochy"
+          title="Włochy"
+          href="https://pl.wikipedia.org/wiki/Grand_Prix_W%C5%82och_Formu%C5%82y_1"
+          coords="184,367,178,345,192,341,210,337,227,334,235,337,227,349,229,366,237,377,250,393,261,399,272,404,287,411,272,414,270,422,274,430,267,441,259,458,233,453,247,444,263,423,240,411,225,394,207,373,196,365"
+          shape="poly"
+        />
+        <area
+          target="_blank"
+          alt="Wielka Brytania"
+          title="Wielka Brytania"
+          href="https://pl.wikipedia.org/wiki/Grand_Prix_Wielkiej_Brytanii_Formu%C5%82y_1"
+          coords="81,271,109,269,136,269,134,260,138,247,129,239,122,222,114,203,106,196,123,187,113,179,114,168,104,167,91,180,90,193,96,204,98,214,104,214,105,223,107,234,96,233,96,243,84,247,98,257"
+          shape="poly"
+        />
+        <area
+          target="_blank"
+          alt="Niemcy"
+          title="Niemcy"
+          href="https://pl.wikipedia.org/wiki/Grand_Prix_Niemiec_Formu%C5%82y_1"
+          coords="183,319,206,322,229,320,238,304,221,285,242,275,238,247,230,236,211,236,202,224,196,232,186,240,179,248,176,263,172,276,174,287"
+          shape="poly"
+        />
+        <area
+          target="_blank"
+          alt="Austria"
+          title="Austria"
+          href="https://pl.wikipedia.org/wiki/Grand_Prix_Austrii_Formu%C5%82y_1"
+          coords="202,325,224,328,240,332,258,324,264,312,262,303,246,302,233,312,223,317,214,321"
+          shape="poly"
+        />
+        <area
+          target="_blank"
+          alt="Rosja"
+          title="Rosja"
+          href="https://pl.wikipedia.org/wiki/Grand_Prix_Rosji_Formu%C5%82y_1"
+          coords="356,25,294,17,300,47,316,78,329,99,323,131,337,135,322,149,293,158,300,173,324,176,337,190,349,193,360,202,374,211,372,225,389,229,405,235,423,239,446,243,454,256,454,268,454,281,448,298,453,306,467,309,467,1,387,1,362,4"
+          shape="poly"
+        />
+        <area
+          target="_blank"
+          alt="Holandia"
+          title="Holandia"
+          href="https://pl.wikipedia.org/wiki/Grand_Prix_Holandii_Formu%C5%82y_1"
+          coords="178,242,168,244,161,255,161,262,169,267,177,259"
+          shape="poly"
+        />
+      </map>
+      <br />
+      <br />
+      <!-- Film z rajdami -->
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/HwyRS_6Uqn0?si=LIP7hT1_Q7TKwpzU"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+      ></iframe>
     </article>
   </body>
 </html>

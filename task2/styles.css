@@ -1,63 +1,56 @@
-/* Basic reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Body styling */
 body {
   font-family: Arial, sans-serif;
   background-color: #eeeeee;
   color: #333;
 }
 
-/* Center-text utility */
 .center-text {
   text-align: center;
 }
 
-/* Header and title styling */
 .f1-header {
   background-color: #ff2e2e;
   color: #fff;
   padding: 20px;
   margin-bottom: 20px;
 }
-#title {
-  font-size: 2.5rem;
-}
-
-/* Navigation menu */
-.menu {
+.f1-header .menu {
   list-style: none;
   padding: 0;
   margin-top: 10px;
 }
-.menu li {
+.f1-header .menu li {
   display: inline-block;
   margin: 0 10px;
 }
-.menu li a {
+.f1-header .menu li a {
   color: #fff;
   text-decoration: none;
   font-weight: bold;
 }
-.menu li a:hover {
+.f1-header .menu li a:hover {
   text-decoration: underline;
 }
 
-/* Main article area */
+#title {
+  font-size: 2.5rem;
+}
+
 .main-content {
   width: 90%;
   max-width: 1100px;
   margin: 0 auto 40px auto;
   padding: 20px;
-  background-color: #fff;
+  background-color: #ffffff;
   border-radius: 5px;
 }
 
-/* Table styling */
 .winners-table {
   margin: 0 auto;
   border-collapse: collapse;
@@ -79,12 +72,10 @@ body {
   background-color: #ccc;
 }
 
-/* Ranking list */
 .ranking-list {
   margin-left: 40px;
 }
 
-/* Images and figures */
 figure {
   text-align: center;
   margin: 20px 0;
@@ -95,25 +86,27 @@ figure img {
   max-width: 100%;
   height: auto;
 }
-figcaption {
+figure figcaption {
   font-size: 0.9rem;
   margin-top: 5px;
 }
 
-/* Form */
 #myForm {
   margin-top: 20px;
 }
+
 fieldset {
   border: 2px solid #999;
   padding: 10px;
-  background-color: #f8f8f8;
+  background-color: white;
 }
+
 label {
   display: inline-block;
   width: 100px;
   margin: 5px 0;
 }
+
 #responseMessage {
   display: none;
   color: green;
@@ -121,12 +114,12 @@ label {
   margin-top: 10px;
 }
 
-/* Progress bar */
 .progress-section {
   width: 90%;
   max-width: 800px;
   margin: 30px auto;
 }
+
 .progress-bar-background {
   position: relative;
   width: 100%;
@@ -136,6 +129,7 @@ label {
   height: 50px;
   margin: 0 auto 10px auto;
 }
+
 #progress-bar {
   height: 50px;
   background-color: #91cc7a;
@@ -143,6 +137,7 @@ label {
   transition: width 2s;
   position: relative;
 }
+
 .car-container {
   position: absolute;
   top: 50%;
@@ -154,13 +149,67 @@ label {
   height: auto;
 }
 
-/* Footer */
-footer {
-  background-color: #ccc;
+@media (max-width: 800px) {
+  .map-section {
+    display: none;
+  }
+}
+.map-section {
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 5px;
+}
+.map-section h3 {
+  margin-bottom: 20px;
+}
+
+@media (max-width: 800px) {
+  .video-section .video-gallery {
+    flex-direction: column-reverse;
+  }
+}
+.video-section {
+  margin: 40px auto;
+  padding: 20px;
+  border-radius: 5px;
+}
+.video-section h3 {
+  margin-bottom: 20px;
+  width: 100%;
+}
+.video-section .video-gallery {
+  border: 3px solid #333;
+  border-radius: 10px;
   padding: 10px;
-  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
 }
-footer p {
-  font-size: 1rem;
-  margin: 0;
+.video-section .video-gallery .video-box {
+  border: 2px solid #ff2e2e;
+  padding: 10px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  margin: 10px 5px;
+  transition: background-color 0.3s ease;
 }
+.video-section .video-gallery .video-box:hover {
+  background-color: #ff6161;
+}
+.video-section .video-gallery .video-box iframe {
+  width: 100%;
+  aspect-ratio: 560/315;
+  border: none;
+}
+
+@media (min-width: 800px) {
+  h2:hover,
+  h3:hover {
+    background-color: #f2f2f2;
+  }
+}/*# sourceMappingURL=styles.css.map */

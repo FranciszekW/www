@@ -1,0 +1,239 @@
+// Variables
+$bg-color: #eeeeee;
+$text-color: #333;
+$link-color: #ff2e2e;
+$car-img-color: #91cc7a;
+$box-bg: #ffffff; // default white for boxes
+$box-hover: lighten($link-color, 10%);
+
+// Mixin for flex container with justify-content
+@mixin flex-center($justify: center) {
+  display: flex;
+  justify-content: $justify;
+  align-items: center;
+}
+
+// Basic reset
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// Body
+body {
+  font-family: Arial, sans-serif;
+  background-color: $bg-color;
+  color: $text-color;
+}
+
+// Utility class to center text
+.center-text {
+  text-align: center;
+}
+
+// Header and Navigation
+.f1-header {
+  background-color: $link-color;
+  color: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  .menu {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+    li {
+      display: inline-block;
+      margin: 0 10px;
+      a {
+        color: #fff;
+        text-decoration: none;
+        font-weight: bold;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+#title {
+  font-size: 2.5rem;
+}
+
+// Main content container
+.main-content {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto 40px auto;
+  padding: 20px;
+  background-color: $box-bg;
+  border-radius: 5px;
+}
+
+// Table styling
+.winners-table {
+  margin: 0 auto;
+  border-collapse: collapse;
+  width: 80%;
+  max-width: 800px;
+  caption {
+    margin-bottom: 10px;
+    font-style: italic;
+  }
+  th,
+  td {
+    padding: 8px;
+    border: 1px solid #999;
+    text-align: center;
+    vertical-align: middle;
+  }
+  th {
+    background-color: #ccc;
+  }
+}
+
+// Ranking list
+.ranking-list {
+  margin-left: 40px;
+}
+
+// Figures and images
+figure {
+  text-align: center;
+  margin: 20px 0;
+  img {
+    border: 3px solid $text-color;
+    border-radius: 5px;
+    max-width: 100%;
+    height: auto;
+  }
+  figcaption {
+    font-size: 0.9rem;
+    margin-top: 5px;
+  }
+}
+
+// Form styling
+#myForm {
+  margin-top: 20px;
+}
+fieldset {
+  border: 2px solid #999;
+  padding: 10px;
+  background-color: lighten($box-bg, 3%);
+}
+label {
+  display: inline-block;
+  width: 100px;
+  margin: 5px 0;
+}
+#responseMessage {
+  display: none;
+  color: green;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+// Progress bar section
+.progress-section {
+  width: 90%;
+  max-width: 800px;
+  margin: 30px auto;
+}
+.progress-bar-background {
+  position: relative;
+  width: 100%;
+  background-color: #e0e0e0;
+  border-radius: 25px;
+  overflow: hidden;
+  height: 50px;
+  margin: 0 auto 10px auto;
+}
+#progress-bar {
+  height: 50px;
+  background-color: $car-img-color;
+  width: 0%;
+  transition: width 2s;
+  position: relative;
+}
+.car-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scaleX(-1);
+  img {
+    width: 80px;
+    height: auto;
+  }
+}
+
+// Hide the map when screen is smaller than 800px
+@media (max-width: 800px) {
+  .map-section {
+    display: none;
+  }
+}
+
+.map-section {
+  margin: 40px auto;
+  padding: 20px;
+  background-color: $box-bg;
+  border-radius: 5px;
+  h3 {
+    margin-bottom: 20px;
+  }
+}
+
+// Change the order
+@media (max-width: 800px) {
+  .video-section .video-gallery {
+    flex-direction: column-reverse;
+  }
+}
+
+// New Video Section styling
+.video-section {
+  margin: 40px auto;
+  padding: 20px;
+  border-radius: 5px;
+  // Using center text utility
+  h3 {
+    margin-bottom: 20px;
+    width: 100%; // Ensure the background expands to full width
+  }
+  .video-gallery {
+    border: 3px solid $text-color;
+    border-radius: 10px;
+    padding: 10px;
+    @include flex-center(center);
+    flex-direction: column;
+    margin: 0 auto;
+    max-width: fit-content;
+    .video-box {
+      border: 2px solid $link-color;
+      padding: 10px;
+      background-color: $box-bg;
+      border-radius: 5px;
+      margin: 10px 5px;
+      transition: background-color 0.3s ease;
+      // Hover effect for all screens: change background slightly
+      &:hover {
+        background-color: $box-hover;
+      }
+      iframe {
+        width: 100%;
+        aspect-ratio: 560 / 315; // Maintain a 16:9 aspect ratio
+        border: none;
+      }
+    }
+  }
+}
+
+// Demonstration of conditional hover (only if window >800px)
+// For example, adding a different hover effect to a header:
+@media (min-width: 800px) {
+  h2:hover,
+  h3:hover {
+    background-color: darken($box-bg, 5%);
+  }
+}

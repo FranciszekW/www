@@ -1,0 +1,166 @@
+/* Basic reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #eeeeee;
+  color: #333;
+}
+
+/* Center-text utility */
+.center-text {
+  text-align: center;
+}
+
+/* Header and title styling */
+.f1-header {
+  background-color: #ff2e2e;
+  color: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+#title {
+  font-size: 2.5rem;
+}
+
+/* Navigation menu */
+.menu {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+}
+.menu li {
+  display: inline-block;
+  margin: 0 10px;
+}
+.menu li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+.menu li a:hover {
+  text-decoration: underline;
+}
+
+/* Main article area */
+.main-content {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto 40px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+/* Table styling */
+.winners-table {
+  margin: 0 auto;
+  border-collapse: collapse;
+  width: 80%;
+  max-width: 800px;
+}
+.winners-table caption {
+  margin-bottom: 10px;
+  font-style: italic;
+}
+.winners-table th,
+.winners-table td {
+  padding: 8px;
+  border: 1px solid #999;
+  text-align: center;
+  vertical-align: middle;
+}
+.winners-table th {
+  background-color: #ccc;
+}
+
+/* Ranking list */
+.ranking-list {
+  margin-left: 40px;
+}
+
+/* Images and figures */
+figure {
+  text-align: center;
+  margin: 20px 0;
+}
+figure img {
+  border: 3px solid #333;
+  border-radius: 5px;
+  max-width: 100%;
+  height: auto;
+}
+figcaption {
+  font-size: 0.9rem;
+  margin-top: 5px;
+}
+
+/* Form */
+#myForm {
+  margin-top: 20px;
+}
+fieldset {
+  border: 2px solid #999;
+  padding: 10px;
+  background-color: #f8f8f8;
+}
+label {
+  display: inline-block;
+  width: 100px;
+  margin: 5px 0;
+}
+#responseMessage {
+  display: none;
+  color: green;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* Progress bar */
+.progress-section {
+  width: 90%;
+  max-width: 800px;
+  margin: 30px auto;
+}
+.progress-bar-background {
+  position: relative;
+  width: 100%;
+  background-color: #e0e0e0;
+  border-radius: 25px;
+  overflow: hidden;
+  height: 50px;
+  margin: 0 auto 10px auto;
+}
+#progress-bar {
+  height: 50px;
+  background-color: #91cc7a;
+  width: 0%;
+  transition: width 2s;
+  position: relative;
+}
+.car-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scaleX(-1);
+}
+.car-container img {
+  width: 80px;
+  height: auto;
+}
+
+/* Footer */
+footer {
+  background-color: #ccc;
+  padding: 10px;
+  margin-top: 20px;
+}
+footer p {
+  font-size: 1rem;
+  margin: 0;
+}

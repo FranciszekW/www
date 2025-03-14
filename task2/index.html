@@ -29,23 +29,42 @@ Wykorzystanie funkcji w pliku SCSS (np. darken, lighten, saturate, desaturate, e
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <header class="f1-header center-text">
-      <h1 id="title">Formuła 1</h1>
-      <nav>
+    <header class="f1-header">
+      <h1 id="title" class="center-text">Formuła 1</h1>
+      <nav class="nav-container">
         <ul class="menu">
-          <li>
-            <a href="index.html">Historia Formuły 1</a>
-          </li>
-          <li>
-            <a href="glory.html">Galeria sław</a>
-          </li>
-          <li>
-            <a href="curious.html">Ciekawostki</a>
-          </li>
+          <li><a href="index.html">Historia Formuły 1</a></li>
+          <li><a href="glory.html">Galeria sław</a></li>
+          <li><a href="curious.html">Ciekawostki</a></li>
         </ul>
+        <!-- Justification control buttons -->
+        <div class="justify-controls">
+          <button data-justify="flex-start">Left</button>
+          <button data-justify="center">Center</button>
+          <button data-justify="flex-end">Right</button>
+          <button data-justify="space-between">Evenly</button>
+        </div>
       </nav>
     </header>
+    <script>
+      // Select all buttons within the justify-controls
+      const buttons = document.querySelectorAll(".justify-controls button");
+      // Select the navigation ul (menu)
+      const menu = document.querySelector(".menu");
 
+      // When a button is clicked, set the menu's justify-content property
+      buttons.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          menu.style.opacity = "0";
+          // Get value from the data-justify attribute
+          const justification = btn.getAttribute("data-justify");
+          setTimeout(() => {
+            menu.style.justifyContent = justification;
+            menu.style.opacity = "1";
+          }, 700);
+        });
+      });
+    </script>
     <article class="main-content">
       <section class="center-text">
         <h2>Historia Formuły 1</h2>

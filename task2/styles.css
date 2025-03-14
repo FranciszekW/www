@@ -20,22 +20,43 @@ body {
   padding: 20px;
   margin-bottom: 20px;
 }
-.f1-header .menu {
+.f1-header .nav-container .menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   list-style: none;
   padding: 0;
-  margin-top: 10px;
+  margin: 10px auto;
+  transition: opacity 0.7s ease;
 }
-.f1-header .menu li {
-  display: inline-block;
+.f1-header .nav-container .menu li {
   margin: 0 10px;
 }
-.f1-header .menu li a {
+.f1-header .nav-container .menu li a {
   color: #fff;
   text-decoration: none;
   font-weight: bold;
 }
-.f1-header .menu li a:hover {
+.f1-header .nav-container .menu li a:hover {
   text-decoration: underline;
+}
+.f1-header .nav-container .justify-controls {
+  margin-top: 10px;
+  text-align: center;
+}
+.f1-header .nav-container .justify-controls button {
+  background-color: #fff;
+  color: #ff2e2e;
+  border: 1px solid #ff2e2e;
+  padding: 5px 10px;
+  cursor: pointer;
+  margin: 0 5px;
+  border-radius: 3px;
+  transition: color 0.5s, border 0.5s;
+}
+.f1-header .nav-container .justify-controls button:hover {
+  color: #333;
+  border: 1px solid #333;
 }
 
 #title {
@@ -211,4 +232,27 @@ label {
   h3:hover {
     background-color: #f2f2f2;
   }
+}
+.justify-left {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.justify-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.justify-right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.justify-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }/*# sourceMappingURL=styles.css.map */

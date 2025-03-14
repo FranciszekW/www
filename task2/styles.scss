@@ -32,25 +32,52 @@ body {
   text-align: center;
 }
 
-// Header and Navigation
 .f1-header {
   background-color: $link-color;
   color: #fff;
   padding: 20px;
   margin-bottom: 20px;
-  .menu {
-    list-style: none;
-    padding: 0;
-    margin-top: 10px;
-    li {
-      display: inline-block;
-      margin: 0 10px;
-      a {
-        color: #fff;
-        text-decoration: none;
-        font-weight: bold;
+
+  // Wrap navigation inside its own container
+  .nav-container {
+    .menu {
+      display: flex; // Make ul a flex container
+      justify-content: center; // Default justification: center
+      align-items: center;
+      list-style: none;
+      padding: 0;
+      margin: 10px auto;
+      transition: opacity 0.7s ease;
+
+      li {
+        margin: 0 10px;
+        a {
+          color: #fff;
+          text-decoration: none;
+          font-weight: bold;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+
+    .justify-controls {
+      margin-top: 10px;
+      text-align: center;
+
+      button {
+        background-color: #fff;
+        color: $link-color;
+        border: 1px solid $link-color;
+        padding: 5px 10px;
+        cursor: pointer;
+        margin: 0 5px;
+        border-radius: 3px;
+        transition: color 0.5s, border 0.5s;
         &:hover {
-          text-decoration: underline;
+          color:#333;
+          border: 1px solid #333;
         }
       }
     }
@@ -59,7 +86,6 @@ body {
 #title {
   font-size: 2.5rem;
 }
-
 // Main content container
 .main-content {
   width: 90%;
@@ -234,4 +260,17 @@ label {
   h3:hover {
     background-color: darken($box-bg, 5%);
   }
+}
+
+.justify-left {
+  @include flex-center(flex-start);
+}
+.justify-center {
+  @include flex-center(center);
+}
+.justify-right {
+  @include flex-center(flex-end);
+}
+.justify-between {
+  @include flex-center(space-between);
 }

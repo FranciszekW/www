@@ -149,11 +149,6 @@ label {
   height: auto;
 }
 
-@media (max-width: 800px) {
-  .map-section {
-    display: none;
-  }
-}
 .map-section {
   margin: 40px auto;
   padding: 20px;
@@ -165,8 +160,8 @@ label {
 }
 
 @media (max-width: 800px) {
-  .video-section .video-gallery {
-    flex-direction: column-reverse;
+  .map-section {
+    display: none;
   }
 }
 .video-section {
@@ -179,13 +174,13 @@ label {
   width: 100%;
 }
 .video-section .video-gallery {
-  border: 3px solid #333;
-  border-radius: 10px;
-  padding: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  border: 3px solid #333;
+  border-radius: 10px;
+  padding: 10px;
   margin: 0 auto;
   max-width: -moz-fit-content;
   max-width: fit-content;
@@ -204,9 +199,13 @@ label {
 .video-section .video-gallery .video-box iframe {
   width: 100%;
   aspect-ratio: 560/315;
-  border: none;
 }
 
+@media (max-width: 800px) {
+  .video-section .video-gallery {
+    flex-direction: column-reverse;
+  }
+}
 @media (min-width: 800px) {
   h2:hover,
   h3:hover {

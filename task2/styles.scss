@@ -167,13 +167,6 @@ label {
   }
 }
 
-// Hide the map when screen is smaller than 800px
-@media (max-width: 800px) {
-  .map-section {
-    display: none;
-  }
-}
-
 .map-section {
   margin: 40px auto;
   padding: 20px;
@@ -184,29 +177,27 @@ label {
   }
 }
 
-// Change the order
+// Hide the map when screen is smaller than 800px
 @media (max-width: 800px) {
-  .video-section .video-gallery {
-    flex-direction: column-reverse;
+  .map-section {
+    display: none;
   }
 }
-
 // New Video Section styling
 .video-section {
   margin: 40px auto;
   padding: 20px;
   border-radius: 5px;
-  // Using center text utility
   h3 {
     margin-bottom: 20px;
     width: 100%; // Ensure the background expands to full width
   }
   .video-gallery {
+    @include flex-center(center);
+    flex-direction: column;
     border: 3px solid $text-color;
     border-radius: 10px;
     padding: 10px;
-    @include flex-center(center);
-    flex-direction: column;
     margin: 0 auto;
     max-width: fit-content;
     .video-box {
@@ -223,8 +214,15 @@ label {
       iframe {
         width: 100%;
         aspect-ratio: 560 / 315; // Maintain a 16:9 aspect ratio
-        border: none;
       }
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .video-section {
+    .video-gallery {
+      flex-direction: column-reverse;
     }
   }
 }

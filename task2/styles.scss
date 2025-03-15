@@ -238,6 +238,7 @@ label {
         background-color: $box-hover;
       }
       iframe {
+        border: none;
         width: 100%;
         aspect-ratio: 560 / 315; // Maintain a 16:9 aspect ratio
       }

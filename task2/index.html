@@ -39,31 +39,25 @@ Wykorzystanie funkcji w pliku SCSS (np. darken, lighten, saturate, desaturate, e
         </ul>
         <!-- Justification control buttons -->
         <div class="justify-controls">
-          <button data-justify="flex-start">Left</button>
-          <button data-justify="center">Center</button>
-          <button data-justify="flex-end">Right</button>
-          <button data-justify="space-between">Evenly</button>
+          <button type="button" onclick="justifyMenu('flex-start')">Left</button>
+          <button type="button" onclick="justifyMenu('center')">Center</button>
+          <button type="button" onclick="justifyMenu('flex-end')">Right</button>
+          <button type="button" onclick="justifyMenu('space-between')">Evenly</button>
         </div>
       </nav>
     </header>
     <script>
-      // Select all buttons within the justify-controls
-      const buttons = document.querySelectorAll(".justify-controls button");
       // Select the navigation ul (menu)
       const menu = document.querySelector(".menu");
 
-      // When a button is clicked, set the menu's justify-content property
-      buttons.forEach((btn) => {
-        btn.addEventListener("click", () => {
-          menu.style.opacity = "0";
-          // Get value from the data-justify attribute
-          const justification = btn.getAttribute("data-justify");
-          setTimeout(() => {
-            menu.style.justifyContent = justification;
-            menu.style.opacity = "1";
-          }, 700);
-        });
-      });
+      // Function to justify menu
+      function justifyMenu(justification) {
+        menu.style.opacity = "0";
+        setTimeout(() => {
+          menu.style.justifyContent = justification;
+          menu.style.opacity = "1";
+        }, 700);
+      }
     </script>
     <article class="main-content">
       <section class="center-text">
@@ -74,61 +68,65 @@ Wykorzystanie funkcji w pliku SCSS (np. darken, lighten, saturate, desaturate, e
           <caption>
             <em>Ostatni zwycięzcy Mistrzostw Świata Formuły 1</em>
           </caption>
-          <tr>
-            <th>Sezon</th>
-            <th>Kierowca</th>
-            <th>Zespół</th>
-          </tr>
-          <tr>
-            <td>2024</td>
-            <td><strong>Max Verstappen</strong></td>
-            <td>Red Bull Racing</td>
-          </tr>
-          <tr>
-            <td>2023</td>
-            <td><strong>Max Verstappen</strong></td>
-            <td>Red Bull Racing</td>
-          </tr>
-          <tr>
-            <td>2022</td>
-            <td><strong>Max Verstappen</strong></td>
-            <td>Red Bull Racing</td>
-          </tr>
-          <tr>
-            <td>2021</td>
-            <td><strong>Max Verstappen</strong></td>
-            <td>Red Bull Racing</td>
-          </tr>
-          <tr>
-            <td>2020</td>
-            <td><strong>Lewis Hamilton</strong></td>
-            <td>Mercedes</td>
-          </tr>
-          <tr>
-            <td>2019</td>
-            <td><strong>Lewis Hamilton</strong></td>
-            <td>Mercedes</td>
-          </tr>
-          <tr>
-            <td>2018</td>
-            <td><strong>Lewis Hamilton</strong></td>
-            <td>Mercedes</td>
-          </tr>
-          <tr>
-            <td>2017</td>
-            <td><strong>Lewis Hamilton</strong></td>
-            <td>Mercedes</td>
-          </tr>
-          <tr>
-            <td>2016</td>
-            <td><strong>Nico Rosberg</strong></td>
-            <td>Mercedes</td>
-          </tr>
-          <tr>
-            <td>2015</td>
-            <td><strong>Lewis Hamilton</strong></td>
-            <td>Mercedes</td>
-          </tr>
+          <thead>
+            <tr>
+              <th scope="col">Sezon</th>
+              <th scope="col">Kierowca</th>
+              <th scope="col">Zespół</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>2024</td>
+              <td><strong>Max Verstappen</strong></td>
+              <td>Red Bull Racing</td>
+            </tr>
+            <tr>
+              <td>2023</td>
+              <td><strong>Max Verstappen</strong></td>
+              <td>Red Bull Racing</td>
+            </tr>
+            <tr>
+              <td>2022</td>
+              <td><strong>Max Verstappen</strong></td>
+              <td>Red Bull Racing</td>
+            </tr>
+            <tr>
+              <td>2021</td>
+              <td><strong>Max Verstappen</strong></td>
+              <td>Red Bull Racing</td>
+            </tr>
+            <tr>
+              <td>2020</td>
+              <td><strong>Lewis Hamilton</strong></td>
+              <td>Mercedes</td>
+            </tr>
+            <tr>
+              <td>2019</td>
+              <td><strong>Lewis Hamilton</strong></td>
+              <td>Mercedes</td>
+            </tr>
+            <tr>
+              <td>2018</td>
+              <td><strong>Lewis Hamilton</strong></td>
+              <td>Mercedes</td>
+            </tr>
+            <tr>
+              <td>2017</td>
+              <td><strong>Lewis Hamilton</strong></td>
+              <td>Mercedes</td>
+            </tr>
+            <tr>
+              <td>2016</td>
+              <td><strong>Nico Rosberg</strong></td>
+              <td>Mercedes</td>
+            </tr>
+            <tr>
+              <td>2015</td>
+              <td><strong>Lewis Hamilton</strong></td>
+              <td>Mercedes</td>
+            </tr>
+          </tbody>
         </table>
       </section>
 
@@ -138,12 +136,7 @@ Wykorzystanie funkcji w pliku SCSS (np. darken, lighten, saturate, desaturate, e
           <li>
             <h3>Robert Kubica</h3>
             <figure>
-              <img
-                src="img/kubica.jpg"
-                alt="Robert Kubica"
-                width="600"
-                height="400"
-              />
+              <img src="img/kubica.jpg" alt="Robert Kubica" width="600" height="400" />
               <figcaption>
                 Źródło:
                 <a
@@ -157,83 +150,72 @@ Wykorzystanie funkcji w pliku SCSS (np. darken, lighten, saturate, desaturate, e
             <details>
               <summary>Życiorys</summary>
               <p>
-                <strong>Robert Kubica</strong> (ur. 7 grudnia 1984 w Krakowie)
-                to polski kierowca wyścigowy, który zdobył międzynarodowe
-                uznanie dzięki swoim osiągnięciom w Formule 1, rajdach oraz
-                wyścigach długodystansowych.
+                <strong>Robert Kubica</strong> (ur. 7 grudnia 1984 w Krakowie) to polski kierowca
+                wyścigowy, który zdobył międzynarodowe uznanie dzięki swoim osiągnięciom w Formule
+                1, rajdach oraz wyścigach długodystansowych.
               </p>
 
               <h4>Wczesne lata i początki kariery</h4>
               <p>
-                Od najmłodszych lat Kubica wykazywał zainteresowanie
-                motorsportem. W wieku czterech lat rozpoczął jazdę małymi
-                samochodami, trenując na parkingach. W wieku siedmiu lat
-                otrzymał swój pierwszy gokart, jednak ze względu na wiek nie
-                mógł jeszcze rywalizować w zawodach. Pierwsze starty w wyścigach
-                kartingowych rozpoczął w wieku dziesięciu lat, szybko zdobywając
-                tytuły mistrza Polski. Dzięki wsparciu włoskiego zespołu CRG,
-                Kubica przeniósł się do Włoch, gdzie kontynuował karierę,
-                wygrywając m.in. Mistrzostwa Włoch Juniorów i Monaco Kart Cup.
+                Od najmłodszych lat Kubica wykazywał zainteresowanie motorsportem. W wieku czterech
+                lat rozpoczął jazdę małymi samochodami, trenując na parkingach. W wieku siedmiu lat
+                otrzymał swój pierwszy gokart, jednak ze względu na wiek nie mógł jeszcze
+                rywalizować w zawodach. Pierwsze starty w wyścigach kartingowych rozpoczął w wieku
+                dziesięciu lat, szybko zdobywając tytuły mistrza Polski. Dzięki wsparciu włoskiego
+                zespołu CRG, Kubica przeniósł się do Włoch, gdzie kontynuował karierę, wygrywając
+                m.in. Mistrzostwa Włoch Juniorów i Monaco Kart Cup.
               </p>
 
               <h4>Kariera wyścigowa</h4>
               <p>
-                W 2001 roku Kubica zadebiutował w wyścigach jednomiejscowych,
-                startując w Formule Renault 2000. Po udanych występach przeszedł
-                do Formuły 3 Euro Series, gdzie po powrocie z kontuzji odniósł
-                swoje pierwsze zwycięstwo. W 2005 roku zdobył tytuł mistrza
-                World Series by Renault, co zwróciło uwagę zespołów Formuły 1.
-                Zadebiutował w F1 w 2006 roku jako kierowca testowy zespołu BMW
-                Sauber, a w 2007 roku awansował do roli kierowcy wyścigowego.
-                Jego największym osiągnięciem było zwycięstwo w Grand Prix
-                Kanady w 2008 roku, co uczyniło go pierwszym Polakiem na podium
-                F1.
+                W 2001 roku Kubica zadebiutował w wyścigach jednomiejscowych, startując w Formule
+                Renault 2000. Po udanych występach przeszedł do Formuły 3 Euro Series, gdzie po
+                powrocie z kontuzji odniósł swoje pierwsze zwycięstwo. W 2005 roku zdobył tytuł
+                mistrza World Series by Renault, co zwróciło uwagę zespołów Formuły 1. Zadebiutował
+                w F1 w 2006 roku jako kierowca testowy zespołu BMW Sauber, a w 2007 roku awansował
+                do roli kierowcy wyścigowego. Jego największym osiągnięciem było zwycięstwo w Grand
+                Prix Kanady w 2008 roku, co uczyniło go pierwszym Polakiem na podium F1.
               </p>
 
               <h4>Wypadek i powrót do wyścigów</h4>
               <p>
-                W 2011 roku, podczas rajdu w Andorze, Kubica uległ poważnemu
-                wypadkowi, łamiąc 42 kości. Po długiej i trudnej rehabilitacji,
-                powrócił do Formuły 1 w 2019 roku z zespołem Williams. Następnie
-                reprezentował zespół Alfa Romeo Racing w latach 2019–2020.
+                W 2011 roku, podczas rajdu w Andorze, Kubica uległ poważnemu wypadkowi, łamiąc 42
+                kości. Po długiej i trudnej rehabilitacji, powrócił do Formuły 1 w 2019 roku z
+                zespołem Williams. Następnie reprezentował zespół Alfa Romeo Racing w latach
+                2019–2020.
               </p>
 
               <h4>Sukcesy w rajdach</h4>
               <p>
-                Po wypadku w 2011 roku Kubica skupił się na rajdach
-                samochodowych. W 2013 roku zdobył tytuł mistrza Europy w rajdach
-                samochodowych, a także zajął drugie miejsce w Rajdowych
-                Mistrzostwach Świata (WRC) w tym samym roku.
+                Po wypadku w 2011 roku Kubica skupił się na rajdach samochodowych. W 2013 roku
+                zdobył tytuł mistrza Europy w rajdach samochodowych, a także zajął drugie miejsce w
+                Rajdowych Mistrzostwach Świata (WRC) w tym samym roku.
               </p>
 
               <h4>Osiągnięcia w wyścigach długodystansowych (WEC)</h4>
               <p>
-                W 2021 roku Kubica rozpoczął rywalizację w European Le Mans
-                Series (ELMS) w klasie LMP2 z zespołem WRT, gdzie odniósł
-                zwycięstwo w pierwszym wyścigu na torze Montmelo. Sezon
-                zakończył się zdobyciem tytułu mistrza ELMS. W tym samym roku
-                zespół WRT wystartował również w 24-godzinnym wyścigu Le Mans,
-                gdzie Kubica wraz z kolegami z drużyny zajął 13. miejsce w
-                klasie LMP2.
+                W 2021 roku Kubica rozpoczął rywalizację w European Le Mans Series (ELMS) w klasie
+                LMP2 z zespołem WRT, gdzie odniósł zwycięstwo w pierwszym wyścigu na torze Montmelo.
+                Sezon zakończył się zdobyciem tytułu mistrza ELMS. W tym samym roku zespół WRT
+                wystartował również w 24-godzinnym wyścigu Le Mans, gdzie Kubica wraz z kolegami z
+                drużyny zajął 13. miejsce w klasie LMP2.
               </p>
 
               <p>
-                W 2022 roku Kubica kontynuował rywalizację w 24 godzin Le Mans z
-                zespołem Prema Orlen Team, gdzie wraz z Louisem Delétrazem i
-                Lorenzem Colombo zajął 2. miejsce w klasie LMP2, tracąc 2 minuty
-                i 21 sekund do zwycięzców.
+                W 2022 roku Kubica kontynuował rywalizację w 24 godzin Le Mans z zespołem Prema
+                Orlen Team, gdzie wraz z Louisem Delétrazem i Lorenzem Colombo zajął 2. miejsce w
+                klasie LMP2, tracąc 2 minuty i 21 sekund do zwycięzców.
               </p>
 
               <p>
-                W 2023 roku Kubica powrócił do zespołu Team WRT w klasie LMP2,
-                gdzie wraz z Robinem Frijnsem i Seanem Gelaelem zakończył wyścig
-                na 2. pozycji w klasie LMP2.
+                W 2023 roku Kubica powrócił do zespołu Team WRT w klasie LMP2, gdzie wraz z Robinem
+                Frijnsem i Seanem Gelaelem zakończył wyścig na 2. pozycji w klasie LMP2.
               </p>
 
               <p>
-                W 2024 roku Kubica przeszedł do zespołu AF Corse, gdzie wraz z
-                kolegami z drużyny odniósł zwycięstwo w wyścigu Lone Star Le
-                Mans w Austin, wyprzedzając załogę Toyoty nr 7.
+                W 2024 roku Kubica przeszedł do zespołu AF Corse, gdzie wraz z kolegami z drużyny
+                odniósł zwycięstwo w wyścigu Lone Star Le Mans w Austin, wyprzedzając załogę Toyoty
+                nr 7.
               </p>
             </details>
           </li>
@@ -241,12 +223,7 @@ Wykorzystanie funkcji w pliku SCSS (np. darken, lighten, saturate, desaturate, e
           <li>
             <h3>Max Verstappen</h3>
             <figure>
-              <img
-                src="img/verstappen.jpg"
-                alt="Max Verstappen"
-                width="600"
-                height="400"
-              />
+              <img src="img/verstappen.jpg" alt="Max Verstappen" width="600" height="400" />
               <figcaption>
                 Źródło:
                 <a
@@ -260,56 +237,50 @@ Wykorzystanie funkcji w pliku SCSS (np. darken, lighten, saturate, desaturate, e
             <details>
               <summary>Życiorys</summary>
               <p>
-                <strong>Max Verstappen</strong> (ur. 30 września 1997 w Hasselt,
-                Belgia) to holenderski kierowca wyścigowy, uważany za jednego z
-                najlepszych zawodników współczesnej Formuły 1.
+                <strong>Max Verstappen</strong> (ur. 30 września 1997 w Hasselt, Belgia) to
+                holenderski kierowca wyścigowy, uważany za jednego z najlepszych zawodników
+                współczesnej Formuły 1.
               </p>
 
               <h4>Wczesne życie</h4>
               <p>
-                Max jest synem byłego kierowcy Formuły 1, Josa Verstappena, i
-                Sophie Kumpen, również związanej z motorsportem jako była
-                kierowca kartingowa. Mimo że urodził się w Belgii, Max od
-                dzieciństwa mieszkał w Holandii i czuł silną więź z tym krajem.
-                W 2015 roku, po ukończeniu 18. roku życia, zdecydował się
-                reprezentować Holandię w wyścigach.
+                Max jest synem byłego kierowcy Formuły 1, Josa Verstappena, i Sophie Kumpen, również
+                związanej z motorsportem jako była kierowca kartingowa. Mimo że urodził się w
+                Belgii, Max od dzieciństwa mieszkał w Holandii i czuł silną więź z tym krajem. W
+                2015 roku, po ukończeniu 18. roku życia, zdecydował się reprezentować Holandię w
+                wyścigach.
               </p>
 
               <h4>Kariera wyścigowa</h4>
               <p>
-                Verstappen rozpoczął swoją profesjonalną karierę w Formule 1 w
-                2015 roku jako najmłodszy debiutant w historii tej serii, mając
-                zaledwie 17 lat. W 2016 roku, po przejściu do zespołu Red Bull
-                Racing, wygrał swoje pierwsze Grand Prix Hiszpanii, stając się
-                najmłodszym zwycięzcą wyścigu F1 w wieku 18 lat. Od tego czasu
-                Verstappen regularnie zdobywał pole position i wygrywał wyścigi,
-                co przyczyniło się do jego statusu jednego z czołowych kierowców
-                w stawce. Jego agresywny styl jazdy i zdolność do wyprzedzania
-                zyskały mu wielu fanów na całym świecie.
+                Verstappen rozpoczął swoją profesjonalną karierę w Formule 1 w 2015 roku jako
+                najmłodszy debiutant w historii tej serii, mając zaledwie 17 lat. W 2016 roku, po
+                przejściu do zespołu Red Bull Racing, wygrał swoje pierwsze Grand Prix Hiszpanii,
+                stając się najmłodszym zwycięzcą wyścigu F1 w wieku 18 lat. Od tego czasu Verstappen
+                regularnie zdobywał pole position i wygrywał wyścigi, co przyczyniło się do jego
+                statusu jednego z czołowych kierowców w stawce. Jego agresywny styl jazdy i zdolność
+                do wyprzedzania zyskały mu wielu fanów na całym świecie.
               </p>
 
               <h4>Osiągnięcia</h4>
               <ul>
                 <li>
-                  <strong>Mistrz Świata Formuły 1:</strong> W 2021 roku
-                  Verstappen zdobył swój pierwszy tytuł mistrza świata F1,
-                  pokonując Lewisa Hamiltona w dramatycznym finale sezonu.
+                  <strong>Mistrz Świata Formuły 1:</strong> W 2021 roku Verstappen zdobył swój
+                  pierwszy tytuł mistrza świata F1, pokonując Lewisa Hamiltona w dramatycznym finale
+                  sezonu.
                 </li>
                 <li>
-                  <strong>Mistrz Świata Formuły 1:</strong> W 2022 roku
-                  Verstappen obronił tytuł mistrza świata, wygrywając drugi raz
-                  z rzędu mistrzostwa F1.
+                  <strong>Mistrz Świata Formuły 1:</strong> W 2022 roku Verstappen obronił tytuł
+                  mistrza świata, wygrywając drugi raz z rzędu mistrzostwa F1.
                 </li>
                 <li>
-                  <strong>Mistrz Świata Formuły 1:</strong> W 2023 roku
-                  Verstappen zdobył trzeci tytuł mistrza świata, kontynuując
-                  swoją dominację w serii.
+                  <strong>Mistrz Świata Formuły 1:</strong> W 2023 roku Verstappen zdobył trzeci
+                  tytuł mistrza świata, kontynuując swoją dominację w serii.
                 </li>
                 <li>
-                  <strong>Mistrz Świata Formuły 1:</strong> W 2024 roku
-                  Verstappen po raz czwarty sięgnął po tytuł mistrza świata,
-                  potwierdzając swoją pozycję jako jeden z najlepszych kierowców
-                  w historii F1.
+                  <strong>Mistrz Świata Formuły 1:</strong> W 2024 roku Verstappen po raz czwarty
+                  sięgnął po tytuł mistrza świata, potwierdzając swoją pozycję jako jeden z
+                  najlepszych kierowców w historii F1.
                 </li>
               </ul>
             </details>
@@ -318,12 +289,7 @@ Wykorzystanie funkcji w pliku SCSS (np. darken, lighten, saturate, desaturate, e
           <li>
             <h3>Fernando Alonso</h3>
             <figure>
-              <img
-                src="img/alonso.jpg"
-                alt="Fernando Alonso"
-                width="600"
-                height="400"
-              />
+              <img src="img/alonso.jpg" alt="Fernando Alonso" width="600" height="400" />
               <figcaption>
                 Źródło:
                 <a
@@ -337,47 +303,43 @@ Wykorzystanie funkcji w pliku SCSS (np. darken, lighten, saturate, desaturate, e
             <details>
               <summary>Życiorys</summary>
               <p>
-                <strong>Fernando Alonso</strong> (ur. 29 lipca 1981 w Oviedo,
-                Hiszpania) to hiszpański kierowca wyścigowy, uważany za jednego
-                z najwybitniejszych zawodników w historii Formuły 1.
+                <strong>Fernando Alonso</strong> (ur. 29 lipca 1981 w Oviedo, Hiszpania) to
+                hiszpański kierowca wyścigowy, uważany za jednego z najwybitniejszych zawodników w
+                historii Formuły 1.
               </p>
               <h4>Wczesne życie</h4>
               <p>
-                Fernando pochodzi z rodziny o skromnych korzeniach; jego matka,
-                Ana María, pracowała w domu towarowym, a ojciec, José Luis, był
-                mechanikiem w fabryce materiałów wybuchowych. To właśnie ojciec
-                zaszczepił w nim pasję do motorsportu, budując dla niego
-                pierwszy gokart.
+                Fernando pochodzi z rodziny o skromnych korzeniach; jego matka, Ana María, pracowała
+                w domu towarowym, a ojciec, José Luis, był mechanikiem w fabryce materiałów
+                wybuchowych. To właśnie ojciec zaszczepił w nim pasję do motorsportu, budując dla
+                niego pierwszy gokart.
               </p>
               <h4>Kariera wyścigowa</h4>
               <p>
-                <strong>Debiut w Formule 1:</strong> W 2001 roku, mając 19 lat,
-                Alonso zadebiutował w Formule 1 jako kierowca testowy zespołu
-                Minardi. Jego talent szybko został dostrzegony, co zaowocowało
-                przejściem do Renault.
+                <strong>Debiut w Formule 1:</strong> W 2001 roku, mając 19 lat, Alonso zadebiutował
+                w Formule 1 jako kierowca testowy zespołu Minardi. Jego talent szybko został
+                dostrzegony, co zaowocowało przejściem do Renault.
               </p>
               <p>
-                <strong>Mistrzostwa Świata:</strong> W 2005 i 2006 roku Alonso
-                zdobył tytuł mistrza świata Formuły 1, stając się najmłodszym
-                dwukrotnym mistrzem w historii tej dyscypliny.
+                <strong>Mistrzostwa Świata:</strong> W 2005 i 2006 roku Alonso zdobył tytuł mistrza
+                świata Formuły 1, stając się najmłodszym dwukrotnym mistrzem w historii tej
+                dyscypliny.
               </p>
               <p>
-                <strong>Późniejsze lata:</strong> Po kilku latach spędzonych w
-                McLarenie i Ferrari, Alonso zdecydował się na przerwę od Formuły
-                1, aby spróbować swoich sił w innych seriach wyścigowych, takich
-                jak 24-godzinny wyścig Le Mans czy Rajd Dakar. W 2021 roku
-                powrócił do Formuły 1 jako kierowca zespołu Alpine.
+                <strong>Późniejsze lata:</strong> Po kilku latach spędzonych w McLarenie i Ferrari,
+                Alonso zdecydował się na przerwę od Formuły 1, aby spróbować swoich sił w innych
+                seriach wyścigowych, takich jak 24-godzinny wyścig Le Mans czy Rajd Dakar. W 2021
+                roku powrócił do Formuły 1 jako kierowca zespołu Alpine.
               </p>
               <h4>Osiągnięcia</h4>
               <ul>
                 <li>
-                  <strong>Formuła 1:</strong> dwukrotny mistrz świata, 32
-                  zwycięstwa, 22 pole positions i 106 podiów.
+                  <strong>Formuła 1:</strong> dwukrotny mistrz świata, 32 zwycięstwa, 22 pole
+                  positions i 106 podiów.
                 </li>
                 <li>
-                  <strong>Inne wyścigi:</strong> Udział w trzech edycjach 500
-                  Mil Indy, zwycięstwo w 24-godzinnym wyścigu Le Mans oraz start
-                  w Rajdzie Dakar.
+                  <strong>Inne wyścigi:</strong> Udział w trzech edycjach 500 Mil Indy, zwycięstwo w
+                  24-godzinnym wyścigu Le Mans oraz start w Rajdzie Dakar.
                 </li>
               </ul>
             </details>
@@ -405,17 +367,12 @@ Wykorzystanie funkcji w pliku SCSS (np. darken, lighten, saturate, desaturate, e
           </fieldset>
         </form>
 
-        <div id="responseMessage">
-          🏁 Formularz został poprawnie wysłany! 🏁
-        </div>
+        <div id="responseMessage">🏁 Formularz został poprawnie wysłany! 🏁</div>
         <audio id="speedSound" src="audio/speed.mp3"></audio>
       </section>
 
       <section class="progress-section center-text">
-        <h3>
-          Postęp Maxa Verstappena w zdobyciu największej liczby tytułów mistrza
-          świata F1
-        </h3>
+        <h3>Postęp Maxa Verstappena w zdobyciu największej liczby tytułów mistrza świata F1</h3>
         <div class="progress-bar-background">
           <div id="progress-bar">
             <div class="car-container">
@@ -423,29 +380,24 @@ Wykorzystanie funkcji w pliku SCSS (np. darken, lighten, saturate, desaturate, e
             </div>
           </div>
         </div>
-        <p>
-          Max Verstappen zdobył <span id="titles-count">4</span> z 7 tytułów
-          mistrza świata
-        </p>
+        <p>Max Verstappen zdobył <span id="titles-count">4</span> z 7 tytułów mistrza świata</p>
       </section>
 
       <script>
         // Formularz
-        document
-          .getElementById("myForm")
-          .addEventListener("submit", function (event) {
-            event.preventDefault();
-            var responseMessage = document.getElementById("responseMessage");
-            responseMessage.style.display = "block";
+        document.getElementById("myForm").addEventListener("submit", function (event) {
+          event.preventDefault();
+          var responseMessage = document.getElementById("responseMessage");
+          responseMessage.style.display = "block";
 
-            var speedSound = document.getElementById("speedSound");
-            speedSound.volume = 0.2;
-            speedSound.play();
+          var speedSound = document.getElementById("speedSound");
+          speedSound.volume = 0.2;
+          speedSound.play();
 
-            setTimeout(function () {
-              responseMessage.style.display = "none";
-            }, 5000);
-          });
+          setTimeout(function () {
+            responseMessage.style.display = "none";
+          }, 5000);
+        });
 
         // Pasek postępu
         document.addEventListener("DOMContentLoaded", function () {
@@ -537,7 +489,6 @@ Wykorzystanie funkcji w pliku SCSS (np. darken, lighten, saturate, desaturate, e
               height="315"
               src="https://www.youtube.com/embed/HwyRS_6Uqn0?si=LIP7hT1_Q7TKwpzU"
               title="YouTube video player"
-              frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               referrerpolicy="strict-origin-when-cross-origin"
               allowfullscreen
@@ -549,7 +500,6 @@ Wykorzystanie funkcji w pliku SCSS (np. darken, lighten, saturate, desaturate, e
               height="315"
               src="https://www.youtube.com/embed/mkhK6FOcHPY?si=PqA8XUORtJxKTq9d"
               title="YouTube video player"
-              frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               referrerpolicy="strict-origin-when-cross-origin"
               allowfullscreen
@@ -561,7 +511,6 @@ Wykorzystanie funkcji w pliku SCSS (np. darken, lighten, saturate, desaturate, e
               height="315"
               src="https://www.youtube.com/embed/V4Asnh_2OF4?si=-xofYiK488FIu4L6"
               title="YouTube video player"
-              frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               referrerpolicy="strict-origin-when-cross-origin"
               allowfullscreen

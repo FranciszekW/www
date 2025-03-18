@@ -1,0 +1,259 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #eeeeee;
+  color: #333;
+}
+
+.center-text {
+  text-align: center;
+}
+
+.f1-header {
+  background-color: #ff2e2e;
+  color: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+.f1-header .nav-container .menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 10px auto;
+  transition: opacity 0.7s ease;
+}
+.f1-header .nav-container .menu li {
+  margin: 0 10px;
+}
+.f1-header .nav-container .menu li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+.f1-header .nav-container .menu li a:hover {
+  text-decoration: underline;
+}
+.f1-header .nav-container .justify-controls {
+  margin-top: 10px;
+  text-align: center;
+}
+.f1-header .nav-container .justify-controls button {
+  background-color: #fff;
+  color: #ff2e2e;
+  border: 1px solid #ff2e2e;
+  padding: 5px 10px;
+  cursor: pointer;
+  margin: 0 5px;
+  border-radius: 3px;
+  transition: color 0.5s, border 0.5s;
+}
+.f1-header .nav-container .justify-controls button:hover {
+  color: #333;
+  border: 1px solid #333;
+}
+
+#title {
+  font-size: 2.5rem;
+}
+
+.main-content {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto 40px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 5px;
+}
+
+.winners-table {
+  margin: 0 auto;
+  border-collapse: collapse;
+  width: 80%;
+  max-width: 800px;
+}
+.winners-table caption {
+  margin-bottom: 10px;
+  font-style: italic;
+}
+.winners-table th,
+.winners-table td {
+  padding: 8px;
+  border: 1px solid #999;
+  text-align: center;
+  vertical-align: middle;
+}
+.winners-table th {
+  background-color: #ccc;
+}
+
+.ranking-list {
+  margin-left: 40px;
+}
+
+figure {
+  text-align: center;
+  margin: 20px 0;
+}
+figure img {
+  border: 3px solid #333;
+  border-radius: 5px;
+  max-width: 100%;
+  height: auto;
+}
+figure figcaption {
+  font-size: 0.9rem;
+  margin-top: 5px;
+}
+
+#myForm {
+  margin-top: 20px;
+}
+
+fieldset {
+  border: 2px solid #999;
+  padding: 10px;
+  background-color: white;
+}
+
+label {
+  display: inline-block;
+  width: 100px;
+  margin: 5px 0;
+}
+
+#responseMessage {
+  display: none;
+  color: green;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.progress-section {
+  width: 90%;
+  max-width: 800px;
+  margin: 30px auto;
+}
+
+.progress-bar-background {
+  position: relative;
+  width: 100%;
+  background-color: #e0e0e0;
+  border-radius: 25px;
+  overflow: hidden;
+  height: 50px;
+  margin: 0 auto 10px auto;
+}
+
+#progress-bar {
+  height: 50px;
+  background-color: #91cc7a;
+  width: 0%;
+  transition: width 2s;
+  position: relative;
+}
+
+.car-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scaleX(-1);
+}
+.car-container img {
+  width: 80px;
+  height: auto;
+}
+
+.map-section {
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 5px;
+}
+.map-section h3 {
+  margin-bottom: 20px;
+}
+
+@media (max-width: 800px) {
+  .map-section {
+    display: none;
+  }
+}
+.video-section {
+  margin: 40px auto;
+  padding: 20px;
+  border-radius: 5px;
+}
+.video-section h3 {
+  margin-bottom: 20px;
+  width: 100%;
+}
+.video-section .video-gallery {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 3px solid #333;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 0 auto;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+}
+.video-section .video-gallery .video-box {
+  border: 2px solid #ff2e2e;
+  padding: 10px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  margin: 10px 5px;
+  transition: background-color 0.3s ease;
+}
+.video-section .video-gallery .video-box:hover {
+  background-color: #ff6161;
+}
+.video-section .video-gallery .video-box iframe {
+  border: none;
+  width: 100%;
+  aspect-ratio: 560/315;
+}
+
+@media (max-width: 800px) {
+  .video-section .video-gallery {
+    flex-direction: column-reverse;
+  }
+}
+@media (min-width: 800px) {
+  h2:hover,
+  h3:hover {
+    background-color: #f2f2f2;
+  }
+}
+.justify-left {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.justify-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.justify-right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.justify-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}/*# sourceMappingURL=styles.css.map */

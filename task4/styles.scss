@@ -32,6 +32,10 @@ body {
   text-align: center;
 }
 
+.light-shadow {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
 .f1-header {
   background-color: $link-color;
   color: #fff;
@@ -96,9 +100,20 @@ body {
   border-radius: 5px;
 }
 
+.short-history {
+  margin: 20px 0 40px 0;
+  border-radius: 5px;
+  padding: 10px;
+  background-color: $box-bg;
+  p {
+    margin-bottom: 15px;
+    text-align: justify;
+  }
+}
+
 // Table styling
 .winners-table {
-  margin: 0 auto;
+  margin: 20px auto;
   border-collapse: collapse;
   width: 80%;
   max-width: 800px;

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Formuła 1 i nie tylko...</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Link to external stylesheet -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="f1-header">
+      <h1 id="title" class="center-text">Formuła 1 i nie tylko...</h1>
+      <nav class="nav-container">
+        <ul class="menu">
+          <li><a href="index.html">Historia Formuły 1</a></li>
+          <li><a href="hall_of_fame.html">Galeria sław</a></li>
+          <li><a href="rally.html">Sekcja rajdowa</a></li>
+        </ul>
+        <!-- Justification control buttons -->
+        <div class="justify-controls">
+          <button type="button" onclick="justifyMenu('flex-start')">Left</button>
+          <button type="button" onclick="justifyMenu('center')">Center</button>
+          <button type="button" onclick="justifyMenu('flex-end')">Right</button>
+          <button type="button" onclick="justifyMenu('space-between')">Evenly</button>
+        </div>
+      </nav>
+      <script>
+        // Select the navigation ul (menu)
+        const menu = document.querySelector(".menu");
+
+        // Function to justify menu
+        function justifyMenu(justification) {
+          menu.style.opacity = "0";
+          setTimeout(() => {
+            menu.style.justifyContent = justification;
+            menu.style.opacity = "1";
+          }, 700);
+        }
+      </script>
+    </header>
+    <article class="main-content">
+      <section class="center-text video-section">
+        <h3>Najlepsze momenty rajdowe</h3>
+        <div class="video-gallery">
+          <div class="video-box">
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/HwyRS_6Uqn0?si=LIP7hT1_Q7TKwpzU"
+              title="YouTube video player"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="video-box">
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/mkhK6FOcHPY?si=PqA8XUORtJxKTq9d"
+              title="YouTube video player"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="video-box">
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/V4Asnh_2OF4?si=-xofYiK488FIu4L6"
+              title="YouTube video player"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+      </section>
+    </article>
+    <footer class="center-text">
+      <p>Pozdrawiamy fanów Formuły 1!</p>
+    </footer>
+  </body>
+</html>

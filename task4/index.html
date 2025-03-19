@@ -22,7 +22,7 @@ Wykorzystanie funkcji w pliku SCSS (np. darken, lighten, saturate, desaturate, e
 <html lang="pl">
   <head>
     <meta charset="UTF-8" />
-    <title>Formuła 1</title>
+    <title>Formuła 1 i nie tylko...</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Link to external stylesheet -->
@@ -30,12 +30,12 @@ Wykorzystanie funkcji w pliku SCSS (np. darken, lighten, saturate, desaturate, e
   </head>
   <body>
     <header class="f1-header">
-      <h1 id="title" class="center-text">Formuła 1</h1>
+      <h1 id="title" class="center-text">Formuła 1 i nie tylko...</h1>
       <nav class="nav-container">
         <ul class="menu">
           <li><a href="index.html">Historia Formuły 1</a></li>
-          <li><a href="glory.html">Galeria sław</a></li>
-          <li><a href="curious.html">Ciekawostki</a></li>
+          <li><a href="hall_of_fame.html">Galeria sław</a></li>
+          <li><a href="rally.html">Sekcja rajdowa</a></li>
         </ul>
         <!-- Justification control buttons -->
         <div class="justify-controls">
@@ -45,24 +45,108 @@ Wykorzystanie funkcji w pliku SCSS (np. darken, lighten, saturate, desaturate, e
           <button type="button" onclick="justifyMenu('space-between')">Evenly</button>
         </div>
       </nav>
-    </header>
-    <script>
-      // Select the navigation ul (menu)
-      const menu = document.querySelector(".menu");
+      <script>
+        // Select the navigation ul (menu)
+        const menu = document.querySelector(".menu");
 
-      // Function to justify menu
-      function justifyMenu(justification) {
-        menu.style.opacity = "0";
-        setTimeout(() => {
-          menu.style.justifyContent = justification;
-          menu.style.opacity = "1";
-        }, 700);
-      }
-    </script>
+        // Function to justify menu
+        function justifyMenu(justification) {
+          menu.style.opacity = "0";
+          setTimeout(() => {
+            menu.style.justifyContent = justification;
+            menu.style.opacity = "1";
+          }, 700);
+        }
+      </script>
+    </header>
     <article class="main-content">
       <section class="center-text">
         <h2>Historia Formuły 1</h2>
+      </section>
+      <section class="light-shadow short-history">
+        <p>
+          Formuła 1 (F1) to najwyższa klasa wyścigów samochodowych, której historia jest pełna
+          pasji, innowacji technologicznych i niezatartego śladu w kulturze motoryzacyjnej.
+        </p>
 
+        <h2>Początki Formuły 1</h2>
+        <p>
+          Korzenie F1 sięgają lat 20. i 30. XX wieku, kiedy to w Europie organizowano pierwsze
+          wyścigi Grand Prix. Oficjalnie Formuła 1 jako seria wyścigów o Mistrzostwo Świata została
+          zainaugurowana w 1950 roku przez Międzynarodową Federację Samochodową (FIA). Pierwszy
+          wyścig odbył się 13 maja 1950 roku na torze Silverstone w Wielkiej Brytanii, gdzie
+          Giuseppe Farina, prowadząc samochód Alfa Romeo, zdobył pierwsze pole startowe.
+        </p>
+
+        <h2>Wczesne lata i dominacja Alfa Romeo</h2>
+        <p>
+          W początkowych latach F1 dominowały zespoły takie jak Alfa Romeo, Ferrari i Maserati.
+          Giuseppe Farina, pierwszy mistrz świata, jeździł dla Alfa Romeo. Kolejną legendą był Juan
+          Manuel Fangio, który zdobył pięć tytułów mistrza świata w latach 1951, 1954, 1955, 1956 i
+          1957, reprezentując różne zespoły, w tym Alfa Romeo, Maserati, Mercedes-Benz i Ferrari.
+        </p>
+
+        <h2>Złota era Formuły 1</h2>
+        <p>
+          Lata 60. i 70. XX wieku to okres znany jako "złota era" F1. Brytyjskie zespoły, takie jak
+          Lotus, McLaren i Williams, zaczęły dominować na torach. Lotus, pod przewodnictwem Colina
+          Chapmana, wprowadził innowacje techniczne, takie jak monocoque – jednolitą konstrukcję
+          nadwozia – oraz aerodynamiczne skrzydła zwiększające docisk i stabilność pojazdów. Jim
+          Clark, kierowca Lotusa, zdobył dwa tytuły mistrza świata w 1963 i 1965 roku. Niestety,
+          liczne tragiczne wypadki, w tym śmierć Jima Clarka w 1968 roku i Joachena Rindta w 1970
+          roku, skłoniły FIA do wprowadzenia surowszych przepisów dotyczących bezpieczeństwa, takich
+          jak obowiązkowe pasy bezpieczeństwa, lepsze kaski i wzmocnione konstrukcje samochodów.
+        </p>
+
+        <h2>Era turbo i dominacja McLarena</h2>
+        <p>
+          Lata 80. XX wieku przyniosły rewolucję technologiczną w postaci silników turbo, które
+          znacznie zwiększyły moc pojazdów. Renault jako pierwszy zespół wprowadził silniki turbo w
+          1977 roku, jednak to McLaren i Ferrari zdominowały tę erę. McLaren, z kierowcami takimi
+          jak Alain Prost i Ayrton Senna, zdobył cztery tytuły mistrza świata konstruktorów z rzędu
+          w latach 1988–1991. Rywalizacja między Prostem a Senną, którzy byli zarówno kolegami z
+          zespołu, jak i zaciekłymi rywalami, stała się jedną z najbardziej pamiętnych w historii
+          sportu.
+        </p>
+
+        <h2>Era hybrydowa i dominacja Mercedesa</h2>
+        <p>
+          W 2014 roku Formuła 1 wkroczyła w nową erę technologiczną z wprowadzeniem silników
+          hybrydowych. Zespoły zaczęły korzystać z zaawansowanych jednostek napędowych, łączących
+          tradycyjne silniki spalinowe z technologią elektryczną, co zwiększyło osiągi i poprawiło
+          efektywność paliwową. Zespół Mercedes stał się dominującą siłą w tej erze, zdobywając
+          tytuły mistrza konstruktorów w każdym sezonie od 2014 roku. Lewis Hamilton, główny
+          kierowca Mercedesa, zdobył liczne tytuły mistrza świata, bijąc wiele rekordów, w tym
+          rekordy liczby zwycięstw i pole positions.
+        </p>
+
+        <h2>Nowe przepisy i przyszłość Formuły 1</h2>
+        <p>
+          W ostatnich latach FIA wprowadziła nowe przepisy mające na celu zwiększenie
+          konkurencyjności i bezpieczeństwa w Formule 1. W 2022 roku wprowadzono nowe regulacje
+          techniczne, które miały na celu zmniejszenie różnic między zespołami i zwiększenie liczby
+          wyprzedzeń na torze. Formuła 1 stawia również coraz większy nacisk na zrównoważony rozwój,
+          z planami wprowadzenia paliw ekologicznych i zmniejszenia emisji CO₂. Formuła 1 pozostaje
+          jednym z najbardziej ekscytujących i prestiżowych sportów na świecie, nieustannie
+          ewoluując i przyciągając miliony fanów na całym globie.
+        </p>
+      </section>
+      <section class="center-text">
+        <h2>Współczesne ściganie</h2>
+      </section>
+      <section class="light-shadow short-history">
+        <h2>Ostatnie sezony Formuły 1</h2>
+        <p>
+          W latach 2010–2025 Formuła 1 była świadkiem dynamicznych zmian i emocjonujących
+          rywalizacji. Sebastian Vettel zdobył cztery kolejne tytuły mistrza świata w latach
+          2010–2013, prowadząc zespół Red Bull Racing do dominacji. Następnie, w latach 2014–2020,
+          Lewis Hamilton z zespołem Mercedes-AMG Petronas zdominował stawkę, zdobywając siedem
+          tytułów mistrza świata. W 2021 roku Max Verstappen rozpoczął swoją dominację, zdobywając
+          cztery kolejne tytuły mistrza świata w latach 2021–2024 z zespołem Red Bull Racing. W 2024
+          roku McLaren zdobył tytuł mistrza konstruktorów po 26-letniej przerwie, co stanowiło
+          istotny punkt zwrotny w historii zespołu.
+        </p>
+        <p>Poniżej przedstawiamy tabelę z ostatnimi 10 mistrzami świata Formuły 1:</p>
         <!-- Tabela zawierająca 10 ostatnich zwycięzców mistrzostw świata F1-->
         <table class="winners-table">
           <caption>
@@ -128,289 +212,51 @@ Wykorzystanie funkcji w pliku SCSS (np. darken, lighten, saturate, desaturate, e
             </tr>
           </tbody>
         </table>
-      </section>
-
-      <section>
-        <h3>Ranking najlepszych kierowców XXI wieku</h3>
-        <ol type="I" class="ranking-list">
-          <li>
-            <h3>Robert Kubica</h3>
-            <figure>
-              <img src="img/kubica.jpg" alt="Robert Kubica" width="600" height="400" />
-              <figcaption>
-                Źródło:
-                <a
-                  href="https://www.sport.pl/F1/7,96296,27556712,kubica-stanal-na-podium-w-swiatyni-f1-to-byl-pamietny-wyscig.html"
-                  target="_blank"
-                >
-                  Sport.pl
-                </a>
-              </figcaption>
-            </figure>
-            <details>
-              <summary>Życiorys</summary>
-              <p>
-                <strong>Robert Kubica</strong> (ur. 7 grudnia 1984 w Krakowie) to polski kierowca
-                wyścigowy, który zdobył międzynarodowe uznanie dzięki swoim osiągnięciom w Formule
-                1, rajdach oraz wyścigach długodystansowych.
-              </p>
-
-              <h4>Wczesne lata i początki kariery</h4>
-              <p>
-                Od najmłodszych lat Kubica wykazywał zainteresowanie motorsportem. W wieku czterech
-                lat rozpoczął jazdę małymi samochodami, trenując na parkingach. W wieku siedmiu lat
-                otrzymał swój pierwszy gokart, jednak ze względu na wiek nie mógł jeszcze
-                rywalizować w zawodach. Pierwsze starty w wyścigach kartingowych rozpoczął w wieku
-                dziesięciu lat, szybko zdobywając tytuły mistrza Polski. Dzięki wsparciu włoskiego
-                zespołu CRG, Kubica przeniósł się do Włoch, gdzie kontynuował karierę, wygrywając
-                m.in. Mistrzostwa Włoch Juniorów i Monaco Kart Cup.
-              </p>
-
-              <h4>Kariera wyścigowa</h4>
-              <p>
-                W 2001 roku Kubica zadebiutował w wyścigach jednomiejscowych, startując w Formule
-                Renault 2000. Po udanych występach przeszedł do Formuły 3 Euro Series, gdzie po
-                powrocie z kontuzji odniósł swoje pierwsze zwycięstwo. W 2005 roku zdobył tytuł
-                mistrza World Series by Renault, co zwróciło uwagę zespołów Formuły 1. Zadebiutował
-                w F1 w 2006 roku jako kierowca testowy zespołu BMW Sauber, a w 2007 roku awansował
-                do roli kierowcy wyścigowego. Jego największym osiągnięciem było zwycięstwo w Grand
-                Prix Kanady w 2008 roku, co uczyniło go pierwszym Polakiem na podium F1.
-              </p>
-
-              <h4>Wypadek i powrót do wyścigów</h4>
-              <p>
-                W 2011 roku, podczas rajdu w Andorze, Kubica uległ poważnemu wypadkowi, łamiąc 42
-                kości. Po długiej i trudnej rehabilitacji, powrócił do Formuły 1 w 2019 roku z
-                zespołem Williams. Następnie reprezentował zespół Alfa Romeo Racing w latach
-                2019–2020.
-              </p>
-
-              <h4>Sukcesy w rajdach</h4>
-              <p>
-                Po wypadku w 2011 roku Kubica skupił się na rajdach samochodowych. W 2013 roku
-                zdobył tytuł mistrza Europy w rajdach samochodowych, a także zajął drugie miejsce w
-                Rajdowych Mistrzostwach Świata (WRC) w tym samym roku.
-              </p>
-
-              <h4>Osiągnięcia w wyścigach długodystansowych (WEC)</h4>
-              <p>
-                W 2021 roku Kubica rozpoczął rywalizację w European Le Mans Series (ELMS) w klasie
-                LMP2 z zespołem WRT, gdzie odniósł zwycięstwo w pierwszym wyścigu na torze Montmelo.
-                Sezon zakończył się zdobyciem tytułu mistrza ELMS. W tym samym roku zespół WRT
-                wystartował również w 24-godzinnym wyścigu Le Mans, gdzie Kubica wraz z kolegami z
-                drużyny zajął 13. miejsce w klasie LMP2.
-              </p>
-
-              <p>
-                W 2022 roku Kubica kontynuował rywalizację w 24 godzin Le Mans z zespołem Prema
-                Orlen Team, gdzie wraz z Louisem Delétrazem i Lorenzem Colombo zajął 2. miejsce w
-                klasie LMP2, tracąc 2 minuty i 21 sekund do zwycięzców.
-              </p>
-
-              <p>
-                W 2023 roku Kubica powrócił do zespołu Team WRT w klasie LMP2, gdzie wraz z Robinem
-                Frijnsem i Seanem Gelaelem zakończył wyścig na 2. pozycji w klasie LMP2.
-              </p>
-
-              <p>
-                W 2024 roku Kubica przeszedł do zespołu AF Corse, gdzie wraz z kolegami z drużyny
-                odniósł zwycięstwo w wyścigu Lone Star Le Mans w Austin, wyprzedzając załogę Toyoty
-                nr 7.
-              </p>
-            </details>
-          </li>
-
-          <li>
-            <h3>Max Verstappen</h3>
-            <figure>
-              <img src="img/verstappen.jpg" alt="Max Verstappen" width="600" height="400" />
-              <figcaption>
-                Źródło:
-                <a
-                  href="https://www.goodwood.com/grr/event-coverage/festival-of-speed/max-verstappen-headlines-red-bull-celebrations-at-the-festival-of-speed/"
-                  target="_blank"
-                >
-                  Goodwood
-                </a>
-              </figcaption>
-            </figure>
-            <details>
-              <summary>Życiorys</summary>
-              <p>
-                <strong>Max Verstappen</strong> (ur. 30 września 1997 w Hasselt, Belgia) to
-                holenderski kierowca wyścigowy, uważany za jednego z najlepszych zawodników
-                współczesnej Formuły 1.
-              </p>
-
-              <h4>Wczesne życie</h4>
-              <p>
-                Max jest synem byłego kierowcy Formuły 1, Josa Verstappena, i Sophie Kumpen, również
-                związanej z motorsportem jako była kierowca kartingowa. Mimo że urodził się w
-                Belgii, Max od dzieciństwa mieszkał w Holandii i czuł silną więź z tym krajem. W
-                2015 roku, po ukończeniu 18. roku życia, zdecydował się reprezentować Holandię w
-                wyścigach.
-              </p>
-
-              <h4>Kariera wyścigowa</h4>
-              <p>
-                Verstappen rozpoczął swoją profesjonalną karierę w Formule 1 w 2015 roku jako
-                najmłodszy debiutant w historii tej serii, mając zaledwie 17 lat. W 2016 roku, po
-                przejściu do zespołu Red Bull Racing, wygrał swoje pierwsze Grand Prix Hiszpanii,
-                stając się najmłodszym zwycięzcą wyścigu F1 w wieku 18 lat. Od tego czasu Verstappen
-                regularnie zdobywał pole position i wygrywał wyścigi, co przyczyniło się do jego
-                statusu jednego z czołowych kierowców w stawce. Jego agresywny styl jazdy i zdolność
-                do wyprzedzania zyskały mu wielu fanów na całym świecie.
-              </p>
-
-              <h4>Osiągnięcia</h4>
-              <ul>
-                <li>
-                  <strong>Mistrz Świata Formuły 1:</strong> W 2021 roku Verstappen zdobył swój
-                  pierwszy tytuł mistrza świata F1, pokonując Lewisa Hamiltona w dramatycznym finale
-                  sezonu.
-                </li>
-                <li>
-                  <strong>Mistrz Świata Formuły 1:</strong> W 2022 roku Verstappen obronił tytuł
-                  mistrza świata, wygrywając drugi raz z rzędu mistrzostwa F1.
-                </li>
-                <li>
-                  <strong>Mistrz Świata Formuły 1:</strong> W 2023 roku Verstappen zdobył trzeci
-                  tytuł mistrza świata, kontynuując swoją dominację w serii.
-                </li>
-                <li>
-                  <strong>Mistrz Świata Formuły 1:</strong> W 2024 roku Verstappen po raz czwarty
-                  sięgnął po tytuł mistrza świata, potwierdzając swoją pozycję jako jeden z
-                  najlepszych kierowców w historii F1.
-                </li>
-              </ul>
-            </details>
-          </li>
-
-          <li>
-            <h3>Fernando Alonso</h3>
-            <figure>
-              <img src="img/alonso.jpg" alt="Fernando Alonso" width="600" height="400" />
-              <figcaption>
-                Źródło:
-                <a
-                  href="https://www.topgear.com/car-news/motorsport/fernando-alonso-f1-needs-bigger-engines-more-power-more-freedom"
-                  target="_blank"
-                >
-                  TopGear
-                </a>
-              </figcaption>
-            </figure>
-            <details>
-              <summary>Życiorys</summary>
-              <p>
-                <strong>Fernando Alonso</strong> (ur. 29 lipca 1981 w Oviedo, Hiszpania) to
-                hiszpański kierowca wyścigowy, uważany za jednego z najwybitniejszych zawodników w
-                historii Formuły 1.
-              </p>
-              <h4>Wczesne życie</h4>
-              <p>
-                Fernando pochodzi z rodziny o skromnych korzeniach; jego matka, Ana María, pracowała
-                w domu towarowym, a ojciec, José Luis, był mechanikiem w fabryce materiałów
-                wybuchowych. To właśnie ojciec zaszczepił w nim pasję do motorsportu, budując dla
-                niego pierwszy gokart.
-              </p>
-              <h4>Kariera wyścigowa</h4>
-              <p>
-                <strong>Debiut w Formule 1:</strong> W 2001 roku, mając 19 lat, Alonso zadebiutował
-                w Formule 1 jako kierowca testowy zespołu Minardi. Jego talent szybko został
-                dostrzegony, co zaowocowało przejściem do Renault.
-              </p>
-              <p>
-                <strong>Mistrzostwa Świata:</strong> W 2005 i 2006 roku Alonso zdobył tytuł mistrza
-                świata Formuły 1, stając się najmłodszym dwukrotnym mistrzem w historii tej
-                dyscypliny.
-              </p>
-              <p>
-                <strong>Późniejsze lata:</strong> Po kilku latach spędzonych w McLarenie i Ferrari,
-                Alonso zdecydował się na przerwę od Formuły 1, aby spróbować swoich sił w innych
-                seriach wyścigowych, takich jak 24-godzinny wyścig Le Mans czy Rajd Dakar. W 2021
-                roku powrócił do Formuły 1 jako kierowca zespołu Alpine.
-              </p>
-              <h4>Osiągnięcia</h4>
-              <ul>
-                <li>
-                  <strong>Formuła 1:</strong> dwukrotny mistrz świata, 32 zwycięstwa, 22 pole
-                  positions i 106 podiów.
-                </li>
-                <li>
-                  <strong>Inne wyścigi:</strong> Udział w trzech edycjach 500 Mil Indy, zwycięstwo w
-                  24-godzinnym wyścigu Le Mans oraz start w Rajdzie Dakar.
-                </li>
-              </ul>
-            </details>
-          </li>
-        </ol>
-      </section>
-
-      <section>
-        <form id="myForm">
-          <fieldset>
-            <legend>Wybierz najlepszego kierowcę Formuły 1:</legend>
-            <label for="driver">Kierowca:</label>
-            <select name="driver" id="driver">
-              <optgroup label="Kierowcy">
-                <option value="kubica">Robert Kubica</option>
-                <option value="verstappen">Max Verstappen</option>
-                <option value="alonso">Fernando Alonso</option>
-              </optgroup>
-            </select>
-            <br />
-            <label for="reason">Uzasadnienie:</label>
-            <input type="text" name="reason" id="reason" />
-            <br />
-            <button type="submit">Wyślij</button>
-          </fieldset>
-        </form>
-
-        <div id="responseMessage">🏁 Formularz został poprawnie wysłany! 🏁</div>
-        <audio id="speedSound" src="audio/speed.mp3"></audio>
-      </section>
-
-      <section class="progress-section center-text">
-        <h3>Postęp Maxa Verstappena w zdobyciu największej liczby tytułów mistrza świata F1</h3>
-        <div class="progress-bar-background">
-          <div id="progress-bar">
-            <div class="car-container">
-              <img src="img/car.gif" alt="Animated Car" />
+        <h2>Dominacja Maxa Verstappena</h2>
+        <p>
+          Max Verstappen, holenderski kierowca wyścigowy, zdominował świat Formuły 1 w ostatnich
+          latach. Swoją przygodę z F1 rozpoczął w wieku 17 lat, stając się najmłodszym kierowcą w
+          historii tego sportu. Jego talent i determinacja szybko zaowocowały sukcesami, a lata
+          2021–2024 przyniosły mu cztery kolejne tytuły mistrza świata. W 2021 roku, po zaciętej
+          rywalizacji z Lewisem Hamiltonem, Verstappen zdobył swój pierwszy tytuł mistrza świata.
+          Kolejne sezony umocniły jego pozycję jako jednego z najwybitniejszych kierowców w historii
+          F1. W 2024 roku, zapewniając sobie tytuł podczas Grand Prix Las Vegas, dołączył do
+          elitarnego grona kierowców z czterema tytułami mistrza świata, obok takich legend jak
+          Sebastian Vettel i Alain Prost. Obecnie, z czterema tytułami na koncie, Verstappen plasuje
+          się wśród najbardziej utytułowanych kierowców w historii F1, ustępując jedynie Michaelowi
+          Schumacherowi i Lewisowi Hamiltonowi (obaj po siedem tytułów) oraz Juanowi Manuelowi
+          Fangio (pięć tytułów).
+        </p>
+        <p>
+          Poniżej przedstawiamy postęp Maxa Verstappena w zdobyciu największej liczby tytułów
+          Mistrza Świata Formuły 1:
+        </p>
+        <section class="progress-section center-text">
+          <div class="progress-bar-background">
+            <div id="progress-bar">
+              <div class="car-container">
+                <img src="img/car.gif" alt="Animated Car" />
+              </div>
             </div>
           </div>
-        </div>
-        <p>Max Verstappen zdobył <span id="titles-count">4</span> z 7 tytułów mistrza świata</p>
+          <div class="center-text">
+            Max Verstappen zdobył <span id="titles-count">4</span> z 7 tytułów mistrza świata.
+          </div>
+          <script>
+            // Pasek postępu
+            document.addEventListener("DOMContentLoaded", function () {
+              var titlesCount = parseInt(document.getElementById("titles-count").textContent);
+              var maxTitles = 7;
+              var progressBar = document.getElementById("progress-bar");
+              var progressPercentage = (titlesCount / maxTitles) * 100;
+              progressBar.style.width = progressPercentage + "%";
+            });
+          </script>
+        </section>
       </section>
 
-      <script>
-        // Formularz
-        document.getElementById("myForm").addEventListener("submit", function (event) {
-          event.preventDefault();
-          var responseMessage = document.getElementById("responseMessage");
-          responseMessage.style.display = "block";
-
-          var speedSound = document.getElementById("speedSound");
-          speedSound.volume = 0.2;
-          speedSound.play();
-
-          setTimeout(function () {
-            responseMessage.style.display = "none";
-          }, 5000);
-        });
-
-        // Pasek postępu
-        document.addEventListener("DOMContentLoaded", function () {
-          var titlesCount = 4;
-          var maxTitles = 7;
-          var progressBar = document.getElementById("progress-bar");
-          var progressPercentage = (titlesCount / maxTitles) * 100;
-          progressBar.style.width = progressPercentage + "%";
-        });
-      </script>
-
       <section class="center-text map-section">
-        <h3>Mapa z zaznaczonymi torami wyścigowymi Formuły 1</h3>
+        <h3>Wyścigi F1 w Europie</h3>
         <img src="img/europe.jpg" usemap="#F1-in-Europe" alt="Mapa Europy" />
         <map name="F1-in-Europe">
           <area
@@ -478,45 +324,10 @@ Wykorzystanie funkcji w pliku SCSS (np. darken, lighten, saturate, desaturate, e
             shape="poly"
           />
         </map>
-      </section>
-
-      <section class="center-text video-section">
-        <h3>Najlepsze momenty rajdowe</h3>
-        <div class="video-gallery">
-          <div class="video-box">
-            <iframe
-              width="560"
-              height="315"
-              src="https://www.youtube.com/embed/HwyRS_6Uqn0?si=LIP7hT1_Q7TKwpzU"
-              title="YouTube video player"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerpolicy="strict-origin-when-cross-origin"
-              allowfullscreen
-            ></iframe>
-          </div>
-          <div class="video-box">
-            <iframe
-              width="560"
-              height="315"
-              src="https://www.youtube.com/embed/mkhK6FOcHPY?si=PqA8XUORtJxKTq9d"
-              title="YouTube video player"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerpolicy="strict-origin-when-cross-origin"
-              allowfullscreen
-            ></iframe>
-          </div>
-          <div class="video-box">
-            <iframe
-              width="560"
-              height="315"
-              src="https://www.youtube.com/embed/V4Asnh_2OF4?si=-xofYiK488FIu4L6"
-              title="YouTube video player"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerpolicy="strict-origin-when-cross-origin"
-              allowfullscreen
-            ></iframe>
-          </div>
-        </div>
+        <p>
+          Najedź kursorem na kraj, aby zobaczyć jego nazwę. Kliknij, aby dowiedzieć się więcej o
+          Grand Prix w tym kraju.
+        </p>
       </section>
     </article>
 

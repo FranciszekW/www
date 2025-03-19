@@ -43,10 +43,17 @@
       <section class="center-text">
         <h2>Galeria sław Formuły 1</h2>
       </section>
-      <section>
-        <h3>Ranking najlepszych kierowców XXI wieku</h3>
+      <section class="base-section light-shadow">
+        <h3>Najlepsi w XXI wieku</h3>
+        <p>
+          XXI wiek przyniósł nam niesamowite pojedynki, technologiczne rewolucje i kierowców, którzy
+          swoją jazdą przedefiniowali granice możliwości na torze. To era pełna niezapomnianych
+          manewrów, dramatycznych zwrotów akcji i triumfów, które przeszły do legendy. Poniżej
+          znajdziesz obiektywny ranking kierowców, którzy na przestrzeni lat zbudowali swoje imperium w
+          królowej motorsportu.
+        </p>
         <ol type="I" class="ranking-list">
-          <li>
+          <li class="ranking-item">
             <h3>Robert Kubica</h3>
             <figure>
               <img src="img/kubica.jpg" alt="Robert Kubica" width="600" height="400" />
@@ -133,7 +140,7 @@
             </details>
           </li>
 
-          <li>
+          <li class="ranking-item">
             <h3>Max Verstappen</h3>
             <figure>
               <img src="img/verstappen.jpg" alt="Max Verstappen" width="600" height="400" />
@@ -199,7 +206,7 @@
             </details>
           </li>
 
-          <li>
+          <li class="ranking-item">
             <h3>Fernando Alonso</h3>
             <figure>
               <img src="img/alonso.jpg" alt="Fernando Alonso" width="600" height="400" />
@@ -274,7 +281,7 @@
             </select>
             <br />
             <label for="reason">Uzasadnienie:</label>
-            <input type="text" name="reason" id="reason" />
+            <input type="text" name="reason" id="reason"/>
             <br />
             <button type="submit">Wyślij</button>
           </fieldset>
@@ -288,6 +295,7 @@
             event.preventDefault();
             var responseMessage = document.getElementById("responseMessage");
             responseMessage.style.display = "block";
+
 
             var speedSound = document.getElementById("speedSound");
             speedSound.volume = 0.2;

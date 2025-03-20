@@ -15,6 +15,12 @@ $card-bg: #f9f9f9;
   align-items: center;
 }
 
+@property --angle {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0deg;
+}
+
 // Basic reset
 * {
   margin: 0;
@@ -403,21 +409,56 @@ details {
     padding: 10px;
     margin: 0 auto;
     .video-box {
-      border: 2px solid $primary-color;
-      padding: 10px;
-      background-color: $box-bg;
-      border-radius: 5px;
-      margin: 10px 5px;
-      transition: background-color 0.3s ease;
-      // Hover effect for all screens: change background slightly
-      &:hover {
-        background-color: $box-hover;
+      margin: 20px 5px;
+      position: relative;
+      &::after,
+      &::before {
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background-image: conic-gradient(
+          from var(--angle),
+          transparent 70%,
+          $primary-color
+        );
+        top: 50%;
+        left: 50%;
+        padding: 7px;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+        border-radius: 10px;
+        animation: spin 5s linear infinite;
+      }
+      &::before {
+        filter: blur(1.5rem);
+        opacity: 0.7;
+      }
+      @keyframes spin {
+        from {
+          --angle: 0deg;
+        }
+        to {
+          --angle: 360deg;
+        }
       }
       iframe {
+        border-radius: 10px;
+        position: relative;
+        z-index: 2;
         border: none;
         width: 100%;
-        aspect-ratio: 560 / 315; // Maintain a 16:9 aspect ratio
+        aspect-ratio: 560 / 315;
+        display: block; // remove the useless padding
       }
+      &:hover::after,
+      &:hover::before {
+        animation-play-state: paused;
+      }
+      transition: transform 0.3s ease-in-out;
+      &:hover {
+        transform: scale(1.05);
+      } 
     }
   }
 }

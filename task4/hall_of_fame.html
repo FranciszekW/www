@@ -7,60 +7,100 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Link to external stylesheet -->
     <!-- <link rel="stylesheet" href="styles.css" /> -->
-     <link rel="stylesheet" href="tail.css" />
+    <link rel="stylesheet" href="tail.css" />
   </head>
   <body>
-    <header class="f1-header">
-      <h1 id="title" class="center-text">Formuła 1 i nie tylko...</h1>
-      <nav class="nav-container">
-        <ul class="menu">
-          <li><a href="index.html">Historia Formuły 1</a></li>
-          <li><a href="hall_of_fame.html">Galeria sław</a></li>
-          <li><a href="rally.html">Sekcja rajdowa</a></li>
+    <header class="bg-red-600 text-white p-5 mb-5">
+      <h1 id="title">Formuła 1 i nie tylko...</h1>
+      <nav>
+        <ul
+          class="menu flex justify-center items-center list-none p-0 my-2 transition-opacity duration-700"
+        >
+          <li class="mx-2">
+            <a href="index.html" class="text-white no-underline font-bold hover:underline"
+              >Historia Formuły 1</a
+            >
+          </li>
+          <li class="mx-2">
+            <a href="hall_of_fame.html" class="text-white no-underline font-bold hover:underline"
+              >Galeria sław</a
+            >
+          </li>
+          <li class="mx-2">
+            <a href="rally.html" class="text-white no-underline font-bold hover:underline"
+              >Sekcja rajdowa</a
+            >
+          </li>
         </ul>
         <!-- Justification control buttons -->
-        <div class="justify-controls">
-          <button type="button" onclick="justifyMenu('flex-start')">Left</button>
-          <button type="button" onclick="justifyMenu('center')">Center</button>
-          <button type="button" onclick="justifyMenu('flex-end')">Right</button>
-          <button type="button" onclick="justifyMenu('space-between')">Evenly</button>
+        <div class="flex flex-row mt-2 text-center justify-evenly">
+          <button
+            type="button"
+            onclick="justifyMenu('flex-start')"
+            class="flex-auto bg-white text-red-600 border border-red-600 px-3 py-1 mx-1 rounded transition-colors duration-500 hover:text-gray-700 hover:border-gray-700 hover:cursor-pointer"
+          >
+            Left
+          </button>
+          <button
+            type="button"
+            onclick="justifyMenu('center')"
+            class="flex-auto bg-white text-red-600 border border-red-600 px-3 py-1 mx-1 rounded transition-colors duration-500 hover:text-gray-700 hover:border-gray-700 cursor-pointer"
+          >
+            Center
+          </button>
+          <button
+            type="button"
+            onclick="justifyMenu('flex-end')"
+            class="flex-auto bg-white text-red-600 border border-red-600 px-3 py-1 mx-1 rounded transition-colors duration-500 hover:text-gray-700 hover:border-gray-700 hover:cursor-pointer"
+          >
+            Right
+          </button>
+          <button
+            type="button"
+            onclick="justifyMenu('space-between')"
+            class="flex-none bg-white text-red-600 border border-red-600 px-3 py-1 mx-1 rounded transition-colors duration-500 hover:text-gray-700 hover:border-gray-700 hover:cursor-pointer"
+          >
+            Evenly
+          </button>
         </div>
       </nav>
-      <script>
-        // Select the navigation ul (menu)
-        const menu = document.querySelector(".menu");
-
-        // Function to justify menu
-        function justifyMenu(justification) {
-          menu.style.opacity = "0";
-          setTimeout(() => {
-            menu.style.justifyContent = justification;
-            menu.style.opacity = "1";
-          }, 700);
-        }
-      </script>
     </header>
-    <article class="main-content">
-      <section class="center-text">
+    <script>
+      // Select the navigation ul (menu)
+      const menu = document.querySelector(".menu");
+
+      // Function to justify menu
+      function justifyMenu(justification) {
+        menu.style.opacity = "0";
+        setTimeout(() => {
+          menu.style.justifyContent = justification;
+          menu.style.opacity = "1";
+        }, 700);
+      }
+    </script>
+
+    <article class="a-base">
+      <section class="text-center mb-5">
         <h2>Galeria sław Formuły 1</h2>
       </section>
-      <section class="base-section light-shadow">
+      <section class="p-5 mb-10 bg-white rounded-lg shadow-md">
         <h3>Najlepsi w XXI wieku</h3>
-        <p>
+        <p class="mb-4 text-justify">
           XXI wiek przyniósł nam niesamowite pojedynki, technologiczne rewolucje i kierowców, którzy
           swoją jazdą przedefiniowali granice możliwości na torze. To era pełna niezapomnianych
           manewrów, dramatycznych zwrotów akcji i triumfów, które przeszły do legendy. Poniżej
-          znajdziesz obiektywny ranking kierowców, którzy na przestrzeni lat zbudowali swoje imperium w
-          królowej motorsportu.
+          znajdziesz obiektywny ranking kierowców, którzy na przestrzeni lat zbudowali swoje
+          imperium w królowej motorsportu.
         </p>
-        <ol type="I" class="ranking-list">
+        <ol class="ranking-list">
           <li class="ranking-item">
             <h3>Robert Kubica</h3>
-            <figure>
-              <img src="img/kubica.jpg" alt="Robert Kubica" width="600" height="400" />
-              <figcaption>
+            <figure class="text-center my-5">
+              <img src="img/kubica.jpg" alt="Robert Kubica" class="ranking-img" />
+              <figcaption class="text-sm mt-2 text-gray-600">
                 Źródło:
                 <a
+                  class="text-red-600"
                   href="https://www.sport.pl/F1/7,96296,27556712,kubica-stanal-na-podium-w-swiatyni-f1-to-byl-pamietny-wyscig.html"
                   target="_blank"
                 >
@@ -68,16 +108,20 @@
                 </a>
               </figcaption>
             </figure>
-            <details>
-              <summary>Życiorys</summary>
-              <p>
+            <details
+              class="p-5 bg-gray-100 border border-gray-800 rounded-lg mt-5 text-base text-gray-800 transition-colors duration-300 ease-in-out hover:bg-white"
+            >
+              <summary class="cursor-pointer">Życiorys</summary>
+              <p class="p-base">
                 <strong>Robert Kubica</strong> (ur. 7 grudnia 1984 w Krakowie) to polski kierowca
                 wyścigowy, który zdobył międzynarodowe uznanie dzięki swoim osiągnięciom w Formule
                 1, rajdach oraz wyścigach długodystansowych.
               </p>
 
-              <h4>Wczesne lata i początki kariery</h4>
-              <p>
+              <h4 class="text-red-600 border-b-2 border-red-600 pb-1 mb-3 text-xl">
+                Wczesne lata i początki kariery
+              </h4>
+              <p class="p-base">
                 Od najmłodszych lat Kubica wykazywał zainteresowanie motorsportem. W wieku czterech
                 lat rozpoczął jazdę małymi samochodami, trenując na parkingach. W wieku siedmiu lat
                 otrzymał swój pierwszy gokart, jednak ze względu na wiek nie mógł jeszcze
@@ -87,8 +131,10 @@
                 m.in. Mistrzostwa Włoch Juniorów i Monaco Kart Cup.
               </p>
 
-              <h4>Kariera wyścigowa</h4>
-              <p>
+              <h4 class="text-red-600 border-b-2 border-red-600 pb-1 mb-3 text-xl">
+                Kariera wyścigowa
+              </h4>
+              <p class="p-base">
                 W 2001 roku Kubica zadebiutował w wyścigach jednomiejscowych, startując w Formule
                 Renault 2000. Po udanych występach przeszedł do Formuły 3 Euro Series, gdzie po
                 powrocie z kontuzji odniósł swoje pierwsze zwycięstwo. W 2005 roku zdobył tytuł
@@ -98,23 +144,29 @@
                 Prix Kanady w 2008 roku, co uczyniło go pierwszym Polakiem na podium F1.
               </p>
 
-              <h4>Wypadek i powrót do wyścigów</h4>
-              <p>
+              <h4 class="text-red-600 border-b-2 border-red-600 pb-1 mb-3 text-xl">
+                Wypadek i powrót do wyścigów
+              </h4>
+              <p class="p-base">
                 W 2011 roku, podczas rajdu w Andorze, Kubica uległ poważnemu wypadkowi, łamiąc 42
                 kości. Po długiej i trudnej rehabilitacji, powrócił do Formuły 1 w 2019 roku z
                 zespołem Williams. Następnie reprezentował zespół Alfa Romeo Racing w latach
                 2019–2020.
               </p>
 
-              <h4>Sukcesy w rajdach</h4>
-              <p>
+              <h4 class="text-red-600 border-b-2 border-red-600 pb-1 mb-3 text-xl">
+                Sukcesy w rajdach
+              </h4>
+              <p class="p-base">
                 Po wypadku w 2011 roku Kubica skupił się na rajdach samochodowych. W 2013 roku
                 zdobył tytuł mistrza Europy w rajdach samochodowych, a także zajął drugie miejsce w
                 Rajdowych Mistrzostwach Świata (WRC) w tym samym roku.
               </p>
 
-              <h4>Osiągnięcia w wyścigach długodystansowych (WEC)</h4>
-              <p>
+              <h4 class="text-red-600 border-b-2 border-red-600 pb-1 mb-3 text-xl">
+                Osiągnięcia w wyścigach długodystansowych (WEC)
+              </h4>
+              <p class="p-base">
                 W 2021 roku Kubica rozpoczął rywalizację w European Le Mans Series (ELMS) w klasie
                 LMP2 z zespołem WRT, gdzie odniósł zwycięstwo w pierwszym wyścigu na torze Montmelo.
                 Sezon zakończył się zdobyciem tytułu mistrza ELMS. W tym samym roku zespół WRT
@@ -122,18 +174,18 @@
                 drużyny zajął 13. miejsce w klasie LMP2.
               </p>
 
-              <p>
+              <p class="p-base">
                 W 2022 roku Kubica kontynuował rywalizację w 24 godzin Le Mans z zespołem Prema
                 Orlen Team, gdzie wraz z Louisem Delétrazem i Lorenzem Colombo zajął 2. miejsce w
                 klasie LMP2, tracąc 2 minuty i 21 sekund do zwycięzców.
               </p>
 
-              <p>
+              <p class="p-base">
                 W 2023 roku Kubica powrócił do zespołu Team WRT w klasie LMP2, gdzie wraz z Robinem
                 Frijnsem i Seanem Gelaelem zakończył wyścig na 2. pozycji w klasie LMP2.
               </p>
 
-              <p>
+              <p class="p-base">
                 W 2024 roku Kubica przeszedł do zespołu AF Corse, gdzie wraz z kolegami z drużyny
                 odniósł zwycięstwo w wyścigu Lone Star Le Mans w Austin, wyprzedzając załogę Toyoty
                 nr 7.
@@ -141,13 +193,20 @@
             </details>
           </li>
 
-          <li class="ranking-item">
+          <li
+            class="ranking-item mb-5 p-4 bg-gray-100 border-l-4 border-red-600 rounded-lg transition-transform duration-300 ease-in-out hover:translate-y-[-5px] relative pl-10"
+          >
             <h3>Max Verstappen</h3>
-            <figure>
-              <img src="img/verstappen.jpg" alt="Max Verstappen" width="600" height="400" />
-              <figcaption>
+            <figure class="text-center my-5">
+              <img
+                src="img/verstappen.jpg"
+                alt="Max Verstappen"
+                class="border-4 border-red-600 rounded-lg max-w-full h-auto transition-transform duration-300 ease-in-out hover:scale-103"
+              />
+              <figcaption class="text-sm mt-2 text-gray-600">
                 Źródło:
                 <a
+                  class="text-red-600"
                   href="https://www.goodwood.com/grr/event-coverage/festival-of-speed/max-verstappen-headlines-red-bull-celebrations-at-the-festival-of-speed/"
                   target="_blank"
                 >
@@ -155,16 +214,20 @@
                 </a>
               </figcaption>
             </figure>
-            <details>
-              <summary>Życiorys</summary>
-              <p>
+            <details
+              class="p-5 bg-gray-100 border border-gray-800 rounded-lg mt-5 text-base text-gray-800 transition-colors duration-300 ease-in-out hover:bg-white"
+            >
+              <summary class="cursor-pointer">Życiorys</summary>
+              <p class="p-base">
                 <strong>Max Verstappen</strong> (ur. 30 września 1997 w Hasselt, Belgia) to
                 holenderski kierowca wyścigowy, uważany za jednego z najlepszych zawodników
                 współczesnej Formuły 1.
               </p>
 
-              <h4>Wczesne życie</h4>
-              <p>
+              <h4 class="text-red-600 border-b-2 border-red-600 pb-1 mb-3 text-xl">
+                Wczesne życie
+              </h4>
+              <p class="p-base">
                 Max jest synem byłego kierowcy Formuły 1, Josa Verstappena, i Sophie Kumpen, również
                 związanej z motorsportem jako była kierowca kartingowa. Mimo że urodził się w
                 Belgii, Max od dzieciństwa mieszkał w Holandii i czuł silną więź z tym krajem. W
@@ -172,8 +235,10 @@
                 wyścigach.
               </p>
 
-              <h4>Kariera wyścigowa</h4>
-              <p>
+              <h4 class="text-red-600 border-b-2 border-red-600 pb-1 mb-3 text-xl">
+                Kariera wyścigowa
+              </h4>
+              <p class="p-base">
                 Verstappen rozpoczął swoją profesjonalną karierę w Formule 1 w 2015 roku jako
                 najmłodszy debiutant w historii tej serii, mając zaledwie 17 lat. W 2016 roku, po
                 przejściu do zespołu Red Bull Racing, wygrał swoje pierwsze Grand Prix Hiszpanii,
@@ -183,22 +248,22 @@
                 do wyprzedzania zyskały mu wielu fanów na całym świecie.
               </p>
 
-              <h4>Osiągnięcia</h4>
-              <ul>
-                <li>
+              <h4 class="text-red-600 border-b-2 border-red-600 pb-1 mb-3 text-xl">Osiągnięcia</h4>
+              <ul class="list-disc pl-5">
+                <li class="mb-2">
                   <strong>Mistrz Świata Formuły 1:</strong> W 2021 roku Verstappen zdobył swój
                   pierwszy tytuł mistrza świata F1, pokonując Lewisa Hamiltona w dramatycznym finale
                   sezonu.
                 </li>
-                <li>
+                <li class="mb-2">
                   <strong>Mistrz Świata Formuły 1:</strong> W 2022 roku Verstappen obronił tytuł
                   mistrza świata, wygrywając drugi raz z rzędu mistrzostwa F1.
                 </li>
-                <li>
+                <li class="mb-2">
                   <strong>Mistrz Świata Formuły 1:</strong> W 2023 roku Verstappen zdobył trzeci
                   tytuł mistrza świata, kontynuując swoją dominację w serii.
                 </li>
-                <li>
+                <li class="mb-2">
                   <strong>Mistrz Świata Formuły 1:</strong> W 2024 roku Verstappen po raz czwarty
                   sięgnął po tytuł mistrza świata, potwierdzając swoją pozycję jako jeden z
                   najlepszych kierowców w historii F1.
@@ -207,13 +272,20 @@
             </details>
           </li>
 
-          <li class="ranking-item">
+          <li
+            class="ranking-item mb-5 p-4 bg-gray-100 border-l-4 border-red-600 rounded-lg transition-transform duration-300 ease-in-out hover:translate-y-[-5px] relative pl-10"
+          >
             <h3>Fernando Alonso</h3>
-            <figure>
-              <img src="img/alonso.jpg" alt="Fernando Alonso" width="600" height="400" />
-              <figcaption>
+            <figure class="text-center my-5">
+              <img
+                src="img/alonso.jpg"
+                alt="Fernando Alonso"
+                class="border-4 border-red-600 rounded-lg max-w-full h-auto transition-transform duration-300 ease-in-out hover:scale-103"
+              />
+              <figcaption class="text-sm mt-2 text-gray-600">
                 Źródło:
                 <a
+                  class="text-red-600"
                   href="https://www.topgear.com/car-news/motorsport/fernando-alonso-f1-needs-bigger-engines-more-power-more-freedom"
                   target="_blank"
                 >
@@ -221,44 +293,50 @@
                 </a>
               </figcaption>
             </figure>
-            <details>
-              <summary>Życiorys</summary>
-              <p>
+            <details
+              class="p-5 bg-gray-100 border border-gray-800 rounded-lg mt-5 text-base text-gray-800 transition-colors duration-300 ease-in-out hover:bg-white"
+            >
+              <summary class="cursor-pointer">Życiorys</summary>
+              <p class="p-base">
                 <strong>Fernando Alonso</strong> (ur. 29 lipca 1981 w Oviedo, Hiszpania) to
                 hiszpański kierowca wyścigowy, uważany za jednego z najwybitniejszych zawodników w
                 historii Formuły 1.
               </p>
-              <h4>Wczesne życie</h4>
-              <p>
+              <h4 class="text-red-600 border-b-2 border-red-600 pb-1 mb-3 text-xl">
+                Wczesne życie
+              </h4>
+              <p class="p-base">
                 Fernando pochodzi z rodziny o skromnych korzeniach; jego matka, Ana María, pracowała
                 w domu towarowym, a ojciec, José Luis, był mechanikiem w fabryce materiałów
                 wybuchowych. To właśnie ojciec zaszczepił w nim pasję do motorsportu, budując dla
                 niego pierwszy gokart.
               </p>
-              <h4>Kariera wyścigowa</h4>
-              <p>
+              <h4 class="text-red-600 border-b-2 border-red-600 pb-1 mb-3 text-xl">
+                Kariera wyścigowa
+              </h4>
+              <p class="p-base">
                 <strong>Debiut w Formule 1:</strong> W 2001 roku, mając 19 lat, Alonso zadebiutował
                 w Formule 1 jako kierowca testowy zespołu Minardi. Jego talent szybko został
-                dostrzegony, co zaowocowało przejściem do Renault.
+                dostrzeżony, co zaowocowało przejściem do Renault.
               </p>
-              <p>
+              <p class="p-base">
                 <strong>Mistrzostwa Świata:</strong> W 2005 i 2006 roku Alonso zdobył tytuł mistrza
                 świata Formuły 1, stając się najmłodszym dwukrotnym mistrzem w historii tej
                 dyscypliny.
               </p>
-              <p>
+              <p class="p-base">
                 <strong>Późniejsze lata:</strong> Po kilku latach spędzonych w McLarenie i Ferrari,
                 Alonso zdecydował się na przerwę od Formuły 1, aby spróbować swoich sił w innych
                 seriach wyścigowych, takich jak 24-godzinny wyścig Le Mans czy Rajd Dakar. W 2021
                 roku powrócił do Formuły 1 jako kierowca zespołu Alpine.
               </p>
-              <h4>Osiągnięcia</h4>
-              <ul>
-                <li>
+              <h4 class="text-red-600 border-b-2 border-red-600 pb-1 mb-3 text-xl">Osiągnięcia</h4>
+              <ul class="list-disc pl-5">
+                <li class="mb-2">
                   <strong>Formuła 1:</strong> dwukrotny mistrz świata, 32 zwycięstwa, 22 pole
                   positions i 106 podiów.
                 </li>
-                <li>
+                <li class="mb-2">
                   <strong>Inne wyścigi:</strong> Udział w trzech edycjach 500 Mil Indy, zwycięstwo w
                   24-godzinnym wyścigu Le Mans oraz start w Rajdzie Dakar.
                 </li>
@@ -269,47 +347,70 @@
       </section>
 
       <section>
-        <form id="myForm">
-          <fieldset>
-            <legend>Wybierz najlepszego kierowcę Formuły 1:</legend>
-            <label for="driver">Kierowca:</label>
-            <select name="driver" id="driver">
+        <form id="myForm" class="w-11/12 max-w-4xl mx-auto p-5 bg-gray-100 rounded-lg shadow-md">
+          <fieldset class="border-none p-0">
+            <legend class="text-xl font-bold text-red-600 mb-2">
+              Wybierz najlepszego kierowcę Formuły 1:
+            </legend>
+            <label for="driver" class="block mt-2 mb-1 font-semibold text-gray-800"
+              >Kierowca:</label
+            >
+            <select
+              name="driver"
+              id="driver"
+              class="w-full p-2 text-base border border-gray-800 rounded-md bg-white transition duration-200 focus:border-red-600 focus:outline-none focus:shadow-outline-red"
+            >
               <optgroup label="Kierowcy">
                 <option value="kubica">Robert Kubica</option>
                 <option value="verstappen">Max Verstappen</option>
                 <option value="alonso">Fernando Alonso</option>
               </optgroup>
             </select>
-            <br />
-            <label for="reason">Uzasadnienie:</label>
-            <input type="text" name="reason" id="reason"/>
-            <br />
-            <button type="submit">Wyślij</button>
+            <label for="reason" class="block mt-4 mb-1 font-semibold text-gray-800"
+              >Uzasadnienie:</label
+            >
+            <input
+              type="text"
+              name="reason"
+              id="reason"
+              class="w-full p-2 text-base border border-gray-800 rounded-md bg-white transition duration-200 focus:border-red-600 focus:outline-none focus:shadow-outline-red"
+            />
+            <button
+              type="submit"
+              class="w-full mt-4 p-3 bg-red-600 text-white font-bold rounded-md transition duration-300 hover:bg-red-700"
+            >
+              Wyślij
+            </button>
           </fieldset>
         </form>
 
-        <div id="responseMessage">🏁 Formularz został poprawnie wysłany! 🏁</div>
+        <div
+          id="responseMessage"
+          class="hidden mt-3 p-2 w-10/12 max-w-4xl mx-auto text-lg font-bold bg-red-600 text-white rounded-md shadow-md text-center border-2 border-gray-800 animate-ping"
+        >
+          🏁 Formularz został poprawnie wysłany! 🏁
+        </div>
         <audio id="speedSound" src="audio/speed.mp3"></audio>
-        <script>
-          // Formularz
-          document.getElementById("myForm").addEventListener("submit", function (event) {
-            event.preventDefault();
-            var responseMessage = document.getElementById("responseMessage");
-            responseMessage.style.display = "block";
-
-
-            var speedSound = document.getElementById("speedSound");
-            speedSound.volume = 0.2;
-            speedSound.play();
-
-            setTimeout(function () {
-              responseMessage.style.display = "none";
-            }, 5000);
-          });
-        </script>
       </section>
+
+      <script>
+        // Formularz
+        document.getElementById("myForm").addEventListener("submit", function (event) {
+          event.preventDefault();
+          var responseMessage = document.getElementById("responseMessage");
+          responseMessage.style.display = "block";
+
+          var speedSound = document.getElementById("speedSound");
+          speedSound.volume = 0.2;
+          speedSound.play();
+
+          setTimeout(function () {
+            responseMessage.style.display = "none";
+          }, 4000);
+        });
+      </script>
     </article>
-    <footer class="center-text">
+    <footer class="f-base">
       <p>Pozdrawiamy fanów Formuły 1!</p>
     </footer>
   </body>

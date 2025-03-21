@@ -28,12 +28,12 @@ Wykorzystanie funkcji w pliku SCSS (np. darken, lighten, saturate, desaturate, e
     <link rel="stylesheet" href="tail.css" />
     <!-- <link rel="stylesheet" href="styles.css" /> -->
   </head>
-  <body class="bg-gray-200 text-gray-800 font-sans">
+  <body>
     <header class="bg-red-600 text-white p-5 mb-5">
-      <h1 id="title" class="text-center text-4xl font-bold">Formuła 1 i nie tylko...</h1>
+      <h1 id="title">Formuła 1 i nie tylko...</h1>
       <nav>
         <ul
-          class="flex justify-center items-center list-none p-0 my-2 transition-opacity duration-700"
+          class="menu flex justify-center items-center list-none p-0 my-2 transition-opacity duration-700"
         >
           <li class="mx-2">
             <a href="index.html" class="text-white no-underline font-bold hover:underline"
@@ -52,32 +52,32 @@ Wykorzystanie funkcji w pliku SCSS (np. darken, lighten, saturate, desaturate, e
           </li>
         </ul>
         <!-- Justification control buttons -->
-        <div class="mt-2 text-center">
+        <div class="flex flex-row mt-2 text-center justify-evenly">
           <button
             type="button"
             onclick="justifyMenu('flex-start')"
-            class="bg-white text-red-600 border border-red-600 px-3 py-1 mx-1 rounded transition-colors duration-500 hover:text-gray-800 hover:border-gray-800 hover:cursor-pointer"
+            class="flex-auto bg-white text-red-600 border border-red-600 px-3 py-1 mx-1 rounded transition-colors duration-500 hover:text-gray-700 hover:border-gray-700 hover:cursor-pointer"
           >
             Left
           </button>
           <button
             type="button"
             onclick="justifyMenu('center')"
-            class="bg-white text-red-600 border border-red-600 px-3 py-1 mx-1 rounded transition-colors duration-500 hover:text-gray-800 hover:border-gray-800 cursor-pointer"
+            class="flex-auto bg-white text-red-600 border border-red-600 px-3 py-1 mx-1 rounded transition-colors duration-500 hover:text-gray-700 hover:border-gray-700 cursor-pointer"
           >
             Center
           </button>
           <button
             type="button"
             onclick="justifyMenu('flex-end')"
-            class="bg-white text-red-600 border border-red-600 px-3 py-1 mx-1 rounded transition-colors duration-500 hover:text-gray-800 hover:border-gray-800 hover:cursor-pointer"
+            class="flex-auto bg-white text-red-600 border border-red-600 px-3 py-1 mx-1 rounded transition-colors duration-500 hover:text-gray-700 hover:border-gray-700 hover:cursor-pointer"
           >
             Right
           </button>
           <button
             type="button"
             onclick="justifyMenu('space-between')"
-            class="bg-white text-red-600 border border-red-600 px-3 py-1 mx-1 rounded transition-colors duration-500 hover:text-gray-800 hover:border-gray-800 hover:cursor-pointer"
+            class="flex-none bg-white text-red-600 border border-red-600 px-3 py-1 mx-1 rounded transition-colors duration-500 hover:text-gray-700 hover:border-gray-700 hover:cursor-pointer"
           >
             Evenly
           </button>
@@ -98,18 +98,19 @@ Wykorzystanie funkcji w pliku SCSS (np. darken, lighten, saturate, desaturate, e
         }, 700);
       }
     </script>
-    <article class="w-11/12 max-w-4xl mx-auto my-10 p-5 bg-white rounded-lg">
+
+    <article class="a-base">
       <section class="text-center mb-5">
-        <h2 class="text-3xl font-bold">Historia Formuły 1</h2>
+        <h2>Historia Formuły 1</h2>
       </section>
-      <section class="p-5 mb-10 bg-white rounded-lg shadow-md">
-        <p class="mb-4 text-justify">
+      <section class="s-base">
+        <p class="p-base">
           Formuła 1 (F1) to najwyższa klasa wyścigów samochodowych, której historia jest pełna
           pasji, innowacji technologicznych i niezatartego śladu w kulturze motoryzacyjnej.
         </p>
 
-        <h3 class="text-2xl font-semibold mb-1">Początki Formuły 1</h3>
-        <p class="mb-4 text-justify">
+        <h3 class="mb-1">Początki Formuły 1</h3>
+        <p class="p-base">
           Korzenie F1 sięgają lat 20. i 30. XX wieku, kiedy to w Europie organizowano pierwsze
           wyścigi Grand Prix. Oficjalnie Formuła 1 jako seria wyścigów o Mistrzostwo Świata została
           zainaugurowana w 1950 roku przez Międzynarodową Federację Samochodową (FIA). Pierwszy
@@ -117,16 +118,16 @@ Wykorzystanie funkcji w pliku SCSS (np. darken, lighten, saturate, desaturate, e
           Giuseppe Farina, prowadząc samochód Alfa Romeo, zdobył pierwsze pole startowe.
         </p>
 
-        <h3 class="text-2xl font-semibold mb-1">Wczesne lata i dominacja Alfa Romeo</h3>
-        <p class="mb-4 text-justify">
+        <h3 class="mb-1">Wczesne lata i dominacja Alfa Romeo</h3>
+        <p class="p-base">
           W początkowych latach F1 dominowały zespoły takie jak Alfa Romeo, Ferrari i Maserati.
           Giuseppe Farina, pierwszy mistrz świata, jeździł dla Alfa Romeo. Kolejną legendą był Juan
           Manuel Fangio, który zdobył pięć tytułów mistrza świata w latach 1951, 1954, 1955, 1956 i
           1957, reprezentując różne zespoły, w tym Alfa Romeo, Maserati, Mercedes-Benz i Ferrari.
         </p>
 
-        <h3 class="text-2xl font-semibold mb-1">Złota era Formuły 1</h3>
-        <p class="mb-4 text-justify">
+        <h3 class="mb-1">Złota era Formuły 1</h3>
+        <p class="p-base">
           Lata 60. i 70. XX wieku to okres znany jako "złota era" F1. Brytyjskie zespoły, takie jak
           Lotus, McLaren i Williams, zaczęły dominować na torach. Lotus, pod przewodnictwem Colina
           Chapmana, wprowadził innowacje techniczne, takie jak monocoque – jednolitą konstrukcję
@@ -137,8 +138,8 @@ Wykorzystanie funkcji w pliku SCSS (np. darken, lighten, saturate, desaturate, e
           jak obowiązkowe pasy bezpieczeństwa, lepsze kaski i wzmocnione konstrukcje samochodów.
         </p>
 
-        <h3 class="text-2xl font-semibold mb-1">Era turbo i dominacja McLarena</h3>
-        <p class="mb-4 text-justify">
+        <h3 class="mb-1">Era turbo i dominacja McLarena</h3>
+        <p class="p-base">
           Lata 80. XX wieku przyniosły rewolucję technologiczną w postaci silników turbo, które
           znacznie zwiększyły moc pojazdów. Renault jako pierwszy zespół wprowadził silniki turbo w
           1977 roku, jednak to McLaren i Ferrari zdominowały tę erę. McLaren, z kierowcami takimi
@@ -148,8 +149,8 @@ Wykorzystanie funkcji w pliku SCSS (np. darken, lighten, saturate, desaturate, e
           sportu.
         </p>
 
-        <h3 class="text-2xl font-semibold mb-1">Era hybrydowa i dominacja Mercedesa</h3>
-        <p class="mb-4 text-justify">
+        <h3 class="mb-1">Era hybrydowa i dominacja Mercedesa</h3>
+        <p class="p-base">
           W 2014 roku Formuła 1 wkroczyła w nową erę technologiczną z wprowadzeniem silników
           hybrydowych. Zespoły zaczęły korzystać z zaawansowanych jednostek napędowych, łączących
           tradycyjne silniki spalinowe z technologią elektryczną, co zwiększyło osiągi i poprawiło
@@ -159,8 +160,8 @@ Wykorzystanie funkcji w pliku SCSS (np. darken, lighten, saturate, desaturate, e
           rekordy liczby zwycięstw i pole positions.
         </p>
 
-        <h3 class="text-2xl font-semibold mb-1">Nowe przepisy i przyszłość Formuły 1</h3>
-        <p class="mb-4 text-justify">
+        <h3 class="mb-1">Nowe przepisy i przyszłość Formuły 1</h3>
+        <p class="p-base">
           W ostatnich latach FIA wprowadziła nowe przepisy mające na celu zwiększenie
           konkurencyjności i bezpieczeństwa w Formule 1. W 2022 roku wprowadzono nowe regulacje
           techniczne, które miały na celu zmniejszenie różnic między zespołami i zwiększenie liczby
@@ -171,11 +172,11 @@ Wykorzystanie funkcji w pliku SCSS (np. darken, lighten, saturate, desaturate, e
         </p>
       </section>
       <section class="text-center mb-5">
-        <h2 class="text-3xl font-bold">Współczesne ściganie</h2>
+        <h2>Współczesne ściganie</h2>
       </section>
-      <section class="p-5 mb-10 bg-white rounded-lg shadow-md">
-        <h3 class="text-2xl font-semibold mb-1">Ostatnie sezony Formuły 1</h3>
-        <p class="mb-4 text-justify">
+      <section class="s-base">
+        <h3 class="mb-1">Ostatnie sezony Formuły 1</h3>
+        <p class="p-base">
           W latach 2010–2025 Formuła 1 była świadkiem dynamicznych zmian i emocjonujących
           rywalizacji. Sebastian Vettel zdobył cztery kolejne tytuły mistrza świata w latach
           2010–2013, prowadząc zespół Red Bull Racing do dominacji. Następnie, w latach 2014–2020,
@@ -187,8 +188,8 @@ Wykorzystanie funkcji w pliku SCSS (np. darken, lighten, saturate, desaturate, e
         </p>
         <p>Poniżej przedstawiamy tabelę z ostatnimi 10 mistrzami świata Formuły 1:</p>
         <!-- Tabela zawierająca 10 ostatnich zwycięzców mistrzostw świata F1-->
-        <table class="winners-table">
-          <caption>
+        <table class="nice-table">
+          <caption class="table-caption">
             <em>Ostatni zwycięzcy Mistrzostw Świata Formuły 1</em>
           </caption>
           <thead>
@@ -251,8 +252,8 @@ Wykorzystanie funkcji w pliku SCSS (np. darken, lighten, saturate, desaturate, e
             </tr>
           </tbody>
         </table>
-        <h3 class="text-2xl font-semibold mb-1">Dominacja Maxa Verstappena</h3>
-        <p class="mb-4 text-justify">
+        <h3 class="mb-1">Dominacja Maxa Verstappena</h3>
+        <p class="p-base">
           Max Verstappen, holenderski kierowca wyścigowy, zdominował świat Formuły 1 w ostatnich
           latach. Swoją przygodę z F1 rozpoczął w wieku 17 lat, stając się najmłodszym kierowcą w
           historii tego sportu. Jego talent i determinacja szybko zaowocowały sukcesami, a lata
@@ -274,7 +275,7 @@ Wykorzystanie funkcji w pliku SCSS (np. darken, lighten, saturate, desaturate, e
           <div class="relative w-full bg-gray-300 rounded-full overflow-hidden h-12 mb-4">
             <div
               id="progress-bar"
-              class="h-full bg-green-400 w-0 transition-width duration-2000 relative"
+              class="h-full bg-[#91cc7a] w-0 transition-width duration-2000 relative"
             >
               <div
                 class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 scale-x-[-1]"
@@ -301,22 +302,26 @@ Wykorzystanie funkcji w pliku SCSS (np. darken, lighten, saturate, desaturate, e
       </section>
 
       <section class="text-center mb-5" id="over-map">
-        <h2 class="text-3xl font-bold">Grand Prix w Europie</h2>
+        <h2>Grand Prix w Europie</h2>
       </section>
-      <section class="p-5 bg-white rounded-lg shadow-md">
-        <p class="mb-4 text-justify">
+      <section class="map-section">
+        <p class="p-base">
           Formuła 1 to nie tylko sport, ale również niesamowita podróż po legendarnych torach
           wyścigowych Europy. Od malowniczej Hiszpanii po deszczową Wielką Brytanię — każdy kraj
           oferuje unikalne wyzwania i emocje dla kierowców oraz kibiców. Oto mapa najważniejszych
           europejskich Grand Prix:
         </p>
-        <p class="mb-4 text-justify">
+        <p class="p-base">
           Najedź kursorem na kraj, aby zobaczyć jego nazwę. Kliknij, aby dowiedzieć się więcej o
           Grand Prix.
         </p>
         <div class="flex justify-center">
-          <img src="img/europe.jpg" usemap="#F1-in-Europe" alt="Mapa Europy" class="border-2
-          border-dashed border-gray-800 rounded-md max-w-full h-auto"/>
+          <img
+            src="img/europe.jpg"
+            usemap="#F1-in-Europe"
+            alt="Mapa Europy"
+            class="border-2 border-dashed border-gray-800 rounded-md max-w-full h-auto"
+          />
         </div>
         <map name="F1-in-Europe">
           <area
@@ -387,8 +392,8 @@ Wykorzystanie funkcji w pliku SCSS (np. darken, lighten, saturate, desaturate, e
       </section>
     </article>
 
-    <footer class="bg-red-600 text-white p-5 mt-5">
-      <p class="text-center">Pozdrawiamy fanów Formuły 1!</p>
+    <footer class="f-base">
+      <p>Pozdrawiamy fanów Formuły 1!</p>
     </footer>
   </body>
 </html>

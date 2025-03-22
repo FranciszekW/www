@@ -1,22 +1,3 @@
-<!-- Zademonstruj:
-
-Ukrywanie jednego z elementów strony w sytuacji, gdy szerokość okna przeglądarki jest mniejsza niż 800px.
-Zmianę koloru tła elementu strony w momencie, gdy kursor znajduje się nad tym elementem.
-Zmianę koloru tła elementu strony w momencie, gdy kursor znajduje się nad tym elementem, ale tylko wtedy, gdy szerokość okna przeglądarki jest większa niż 800px.
-Zmianę kolejności elementów strony w momencie, gdy szerokość okna przeglądarki jest mniejsza niż 800px (elementy mają być ułożone jeden pod drugim).
-Wykorzystanie atrybutu justify-content do wyśrodkowania elementów w kontenerze:
-po lewej stronie,
-po prawej stronie,
-na środku,
-równomiernie rozłożone.
-Przygotuj SCSS, który będzie zawierał:
-zmienną z kolorami tła,
-zmienną z kolorami tekstu,
-zmienną z kolorami linków.
-Wykorzystanie zmiennych w pliku SCSS.
-Wykorzystanie mixinów w pliku SCSS.
-Wykorzystanie zagnieżdżania w pliku SCSS.
-Wykorzystanie funkcji w pliku SCSS (np. darken, lighten, saturate, desaturate, etc.). -->
 <!DOCTYPE html>
 <html lang="pl">
   <head>
@@ -29,62 +10,43 @@ Wykorzystanie funkcji w pliku SCSS (np. darken, lighten, saturate, desaturate, e
     <!-- <link rel="stylesheet" href="styles.css" /> -->
   </head>
   <body>
-    <header class="bg-red-600 text-white p-5 mb-5">
+    <header class="my-header">
       <h1 id="title">Formuła 1 i nie tylko...</h1>
       <nav>
         <ul
           class="menu flex justify-center items-center list-none p-0 my-2 transition-opacity duration-700"
         >
           <li class="mx-2">
-            <a href="index.html" class="text-white no-underline font-bold hover:underline"
-              >Historia Formuły 1</a
-            >
+            <a href="index.html" class="my-nav-link">Historia Formuły 1</a>
           </li>
           <li class="mx-2">
-            <a href="hall_of_fame.html" class="text-white no-underline font-bold hover:underline"
-              >Galeria sław</a
-            >
+            <a href="hall_of_fame.html" class="my-nav-link">Galeria sław</a>
           </li>
           <li class="mx-2">
-            <a href="rally.html" class="text-white no-underline font-bold hover:underline"
-              >Sekcja rajdowa</a
-            >
+            <a href="rally.html" class="my-nav-link">Sekcja rajdowa</a>
           </li>
         </ul>
         <!-- Justification control buttons -->
         <div class="flex flex-row mt-2 text-center justify-evenly">
-          <button
-            type="button"
-            onclick="justifyMenu('flex-start')"
-            class="flex-auto bg-white text-red-600 border border-red-600 px-3 py-1 mx-1 rounded transition-colors duration-500 hover:text-gray-700 hover:border-gray-700 hover:cursor-pointer"
-          >
+          <button type="button" onclick="justifyMenu('flex-start')" class="my-just-button">
             Left
           </button>
-          <button
-            type="button"
-            onclick="justifyMenu('center')"
-            class="flex-auto bg-white text-red-600 border border-red-600 px-3 py-1 mx-1 rounded transition-colors duration-500 hover:text-gray-700 hover:border-gray-700 cursor-pointer"
-          >
+          <button type="button" onclick="justifyMenu('center')" class="my-just-button">
             Center
           </button>
-          <button
-            type="button"
-            onclick="justifyMenu('flex-end')"
-            class="flex-auto bg-white text-red-600 border border-red-600 px-3 py-1 mx-1 rounded transition-colors duration-500 hover:text-gray-700 hover:border-gray-700 hover:cursor-pointer"
-          >
+          <button type="button" onclick="justifyMenu('flex-end')" class="my-just-button">
             Right
           </button>
           <button
             type="button"
             onclick="justifyMenu('space-between')"
-            class="flex-none bg-white text-red-600 border border-red-600 px-3 py-1 mx-1 rounded transition-colors duration-500 hover:text-gray-700 hover:border-gray-700 hover:cursor-pointer"
+            class="flex-none my-just-button"
           >
             Evenly
           </button>
         </div>
       </nav>
     </header>
-
     <script>
       // Select the navigation ul (menu)
       const menu = document.querySelector(".menu");

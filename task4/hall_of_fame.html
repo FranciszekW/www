@@ -10,24 +10,24 @@
     <link rel="stylesheet" href="tail.css" />
   </head>
   <body>
-    <header class="bg-red-600 text-white p-5 mb-5">
+    <header class="my-header">
       <h1 id="title">Formuła 1 i nie tylko...</h1>
       <nav>
         <ul
           class="menu flex justify-center items-center list-none p-0 my-2 transition-opacity duration-700"
         >
           <li class="mx-2">
-            <a href="index.html" class="text-white no-underline font-bold hover:underline"
+            <a href="index.html" class="my-nav-link"
               >Historia Formuły 1</a
             >
           </li>
           <li class="mx-2">
-            <a href="hall_of_fame.html" class="text-white no-underline font-bold hover:underline"
+            <a href="hall_of_fame.html" class="my-nav-link"
               >Galeria sław</a
             >
           </li>
           <li class="mx-2">
-            <a href="rally.html" class="text-white no-underline font-bold hover:underline"
+            <a href="rally.html" class="my-nav-link"
               >Sekcja rajdowa</a
             >
           </li>
@@ -37,28 +37,28 @@
           <button
             type="button"
             onclick="justifyMenu('flex-start')"
-            class="flex-auto bg-white text-red-600 border border-red-600 px-3 py-1 mx-1 rounded transition-colors duration-500 hover:text-gray-700 hover:border-gray-700 hover:cursor-pointer"
+            class="my-just-button"
           >
             Left
           </button>
           <button
             type="button"
             onclick="justifyMenu('center')"
-            class="flex-auto bg-white text-red-600 border border-red-600 px-3 py-1 mx-1 rounded transition-colors duration-500 hover:text-gray-700 hover:border-gray-700 cursor-pointer"
+            class="my-just-button"
           >
             Center
           </button>
           <button
             type="button"
             onclick="justifyMenu('flex-end')"
-            class="flex-auto bg-white text-red-600 border border-red-600 px-3 py-1 mx-1 rounded transition-colors duration-500 hover:text-gray-700 hover:border-gray-700 hover:cursor-pointer"
+            class="my-just-button"
           >
             Right
           </button>
           <button
             type="button"
             onclick="justifyMenu('space-between')"
-            class="flex-none bg-white text-red-600 border border-red-600 px-3 py-1 mx-1 rounded transition-colors duration-500 hover:text-gray-700 hover:border-gray-700 hover:cursor-pointer"
+            class="flex-none my-just-button"
           >
             Evenly
           </button>
@@ -109,7 +109,7 @@
               </figcaption>
             </figure>
             <details
-              class="p-5 bg-gray-100 border border-gray-800 rounded-lg mt-5 text-base text-gray-800 transition-colors duration-300 ease-in-out hover:bg-white"
+              class="ranking-details"
             >
               <summary class="cursor-pointer">Życiorys</summary>
               <p class="p-base">
@@ -118,7 +118,7 @@
                 1, rajdach oraz wyścigach długodystansowych.
               </p>
 
-              <h4 class="text-red-600 border-b-2 border-red-600 pb-1 mb-3 text-xl">
+              <h4 class="h-ranking">
                 Wczesne lata i początki kariery
               </h4>
               <p class="p-base">
@@ -131,7 +131,7 @@
                 m.in. Mistrzostwa Włoch Juniorów i Monaco Kart Cup.
               </p>
 
-              <h4 class="text-red-600 border-b-2 border-red-600 pb-1 mb-3 text-xl">
+              <h4 class="h-ranking">
                 Kariera wyścigowa
               </h4>
               <p class="p-base">
@@ -144,7 +144,7 @@
                 Prix Kanady w 2008 roku, co uczyniło go pierwszym Polakiem na podium F1.
               </p>
 
-              <h4 class="text-red-600 border-b-2 border-red-600 pb-1 mb-3 text-xl">
+              <h4 class="h-ranking">
                 Wypadek i powrót do wyścigów
               </h4>
               <p class="p-base">
@@ -154,7 +154,7 @@
                 2019–2020.
               </p>
 
-              <h4 class="text-red-600 border-b-2 border-red-600 pb-1 mb-3 text-xl">
+              <h4 class="h-ranking">
                 Sukcesy w rajdach
               </h4>
               <p class="p-base">
@@ -163,7 +163,7 @@
                 Rajdowych Mistrzostwach Świata (WRC) w tym samym roku.
               </p>
 
-              <h4 class="text-red-600 border-b-2 border-red-600 pb-1 mb-3 text-xl">
+              <h4 class="h-ranking">
                 Osiągnięcia w wyścigach długodystansowych (WEC)
               </h4>
               <p class="p-base">
@@ -194,14 +194,14 @@
           </li>
 
           <li
-            class="ranking-item mb-5 p-4 bg-gray-100 border-l-4 border-red-600 rounded-lg transition-transform duration-300 ease-in-out hover:translate-y-[-5px] relative pl-10"
+            class="ranking-item"
           >
             <h3>Max Verstappen</h3>
             <figure class="text-center my-5">
               <img
                 src="img/verstappen.jpg"
                 alt="Max Verstappen"
-                class="border-4 border-red-600 rounded-lg max-w-full h-auto transition-transform duration-300 ease-in-out hover:scale-103"
+                class="ranking-img"
               />
               <figcaption class="text-sm mt-2 text-gray-600">
                 Źródło:
@@ -215,7 +215,7 @@
               </figcaption>
             </figure>
             <details
-              class="p-5 bg-gray-100 border border-gray-800 rounded-lg mt-5 text-base text-gray-800 transition-colors duration-300 ease-in-out hover:bg-white"
+              class="ranking-details"
             >
               <summary class="cursor-pointer">Życiorys</summary>
               <p class="p-base">
@@ -224,7 +224,7 @@
                 współczesnej Formuły 1.
               </p>
 
-              <h4 class="text-red-600 border-b-2 border-red-600 pb-1 mb-3 text-xl">
+              <h4 class="h-ranking">
                 Wczesne życie
               </h4>
               <p class="p-base">
@@ -235,7 +235,7 @@
                 wyścigach.
               </p>
 
-              <h4 class="text-red-600 border-b-2 border-red-600 pb-1 mb-3 text-xl">
+              <h4 class="h-ranking">
                 Kariera wyścigowa
               </h4>
               <p class="p-base">
@@ -248,7 +248,7 @@
                 do wyprzedzania zyskały mu wielu fanów na całym świecie.
               </p>
 
-              <h4 class="text-red-600 border-b-2 border-red-600 pb-1 mb-3 text-xl">Osiągnięcia</h4>
+              <h4 class="h-ranking">Osiągnięcia</h4>
               <ul class="list-disc pl-5">
                 <li class="mb-2">
                   <strong>Mistrz Świata Formuły 1:</strong> W 2021 roku Verstappen zdobył swój
@@ -273,14 +273,14 @@
           </li>
 
           <li
-            class="ranking-item mb-5 p-4 bg-gray-100 border-l-4 border-red-600 rounded-lg transition-transform duration-300 ease-in-out hover:translate-y-[-5px] relative pl-10"
+            class="ranking-item"
           >
             <h3>Fernando Alonso</h3>
             <figure class="text-center my-5">
               <img
                 src="img/alonso.jpg"
                 alt="Fernando Alonso"
-                class="border-4 border-red-600 rounded-lg max-w-full h-auto transition-transform duration-300 ease-in-out hover:scale-103"
+                class="ranking-img"
               />
               <figcaption class="text-sm mt-2 text-gray-600">
                 Źródło:
@@ -294,7 +294,7 @@
               </figcaption>
             </figure>
             <details
-              class="p-5 bg-gray-100 border border-gray-800 rounded-lg mt-5 text-base text-gray-800 transition-colors duration-300 ease-in-out hover:bg-white"
+              class="ranking-details"
             >
               <summary class="cursor-pointer">Życiorys</summary>
               <p class="p-base">
@@ -302,7 +302,7 @@
                 hiszpański kierowca wyścigowy, uważany za jednego z najwybitniejszych zawodników w
                 historii Formuły 1.
               </p>
-              <h4 class="text-red-600 border-b-2 border-red-600 pb-1 mb-3 text-xl">
+              <h4 class="h-ranking">
                 Wczesne życie
               </h4>
               <p class="p-base">
@@ -311,7 +311,7 @@
                 wybuchowych. To właśnie ojciec zaszczepił w nim pasję do motorsportu, budując dla
                 niego pierwszy gokart.
               </p>
-              <h4 class="text-red-600 border-b-2 border-red-600 pb-1 mb-3 text-xl">
+              <h4 class="h-ranking">
                 Kariera wyścigowa
               </h4>
               <p class="p-base">
@@ -330,7 +330,7 @@
                 seriach wyścigowych, takich jak 24-godzinny wyścig Le Mans czy Rajd Dakar. W 2021
                 roku powrócił do Formuły 1 jako kierowca zespołu Alpine.
               </p>
-              <h4 class="text-red-600 border-b-2 border-red-600 pb-1 mb-3 text-xl">Osiągnięcia</h4>
+              <h4 class="h-ranking">Osiągnięcia</h4>
               <ul class="list-disc pl-5">
                 <li class="mb-2">
                   <strong>Formuła 1:</strong> dwukrotny mistrz świata, 32 zwycięstwa, 22 pole

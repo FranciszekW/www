@@ -39,10 +39,19 @@
   }
   .p-base {
     @apply mb-4 text-justify;
-    
   }
   .f-base {
     @apply bg-red-600 text-white p-2 mt-5 text-center;
+  }
+
+  .my-header {
+    @apply bg-red-600 text-white p-5 text-center mb-5;
+  }
+  .my-nav-link {
+    @apply text-white no-underline font-bold hover:underline;
+  }
+  .my-just-button {
+    @apply flex-auto bg-white text-red-600 border border-red-600 px-3 py-1 mx-1 rounded transition-colors duration-500 hover:text-gray-700 hover:border-gray-700 hover:cursor-pointer;
   }
 
   .nice-table {
@@ -69,7 +78,7 @@
     counter-reset: ranking-counter;
   }
   .ranking-item {
-    @apply mb-5 p-4 bg-gray-100 border-l-4 border-red-600 rounded-lg transition-transform duration-300 ease-in-out hover:translate-y-[-5px] relative pl-10;
+    @apply mb-5 p-4 bg-gray-100 border-l-4 border-red-600 rounded-lg transition-transform duration-300 ease-in-out hover:translate-y-[-10px] relative pl-10;
     counter-increment: ranking-counter;
   }
   .ranking-item::before {
